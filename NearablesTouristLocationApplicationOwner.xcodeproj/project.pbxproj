@@ -15,6 +15,23 @@
 		B237EB801CA0256F0031136B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B237EB7E1CA0256F0031136B /* LaunchScreen.storyboard */; };
 		B237EB8B1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */; };
 		B237EB961CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */; };
+		B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */; };
+		B237EBA71CA027680031136B /* parse-library-1.12.0 in Resources */ = {isa = PBXBuildFile; fileRef = B237EBA61CA027680031136B /* parse-library-1.12.0 */; };
+		B237EBA91CA040E70031136B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBA81CA040E70031136B /* Parse.framework */; };
+		B237EBAC1CA045820031136B /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBAB1CA045820031136B /* AdminViewController.m */; };
+		B237EBB01CA049ED0031136B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBAF1CA049ED0031136B /* ParseUI.framework */; };
+		B237EBB21CA063D70031136B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB11CA063D70031136B /* Bolts.framework */; };
+		B237EBB41CA064440031136B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB31CA064440031136B /* libsqlite3.0.tbd */; };
+		B237EBB61CA0644F0031136B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB51CA0644F0031136B /* libz.tbd */; };
+		B237EBB81CA064910031136B /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB71CA064910031136B /* ParseTwitterUtils.framework */; };
+		B237EBBA1CA064B20031136B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB91CA064B20031136B /* SystemConfiguration.framework */; };
+		B237EBBC1CA064C50031136B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBBB1CA064C50031136B /* StoreKit.framework */; };
+		B237EBBE1CA064CB0031136B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBBD1CA064CB0031136B /* Security.framework */; };
+		B237EBC01CA064DF0031136B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBBF1CA064DF0031136B /* QuartzCore.framework */; };
+		B237EBC21CA064E90031136B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC11CA064E90031136B /* CoreLocation.framework */; };
+		B237EBC41CA065010031136B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC31CA065010031136B /* CoreGraphics.framework */; };
+		B237EBC61CA065140031136B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC51CA065140031136B /* CFNetwork.framework */; };
+		B237EBC81CA065310031136B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC71CA065310031136B /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +68,25 @@
 		B237EB911CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearablesTouristLocationApplicationOwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearablesTouristLocationApplicationOwnerUITests.m; sourceTree = "<group>"; };
 		B237EB971CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnerLoginViewController.h; sourceTree = "<group>"; };
+		B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnerLoginViewController.m; sourceTree = "<group>"; };
+		B237EBA61CA027680031136B /* parse-library-1.12.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.12.0"; sourceTree = "<group>"; };
+		B237EBA81CA040E70031136B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.12.0/Parse.framework"; sourceTree = "<group>"; };
+		B237EBAA1CA045820031136B /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
+		B237EBAB1CA045820031136B /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
+		B237EBAF1CA049ED0031136B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.12.0/ParseUI.framework"; sourceTree = "<group>"; };
+		B237EBB11CA063D70031136B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.12.0/Bolts.framework"; sourceTree = "<group>"; };
+		B237EBB31CA064440031136B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B237EBB51CA0644F0031136B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B237EBB71CA064910031136B /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.12.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		B237EBB91CA064B20031136B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B237EBBB1CA064C50031136B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B237EBBD1CA064CB0031136B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B237EBBF1CA064DF0031136B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B237EBC11CA064E90031136B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B237EBC31CA065010031136B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B237EBC51CA065140031136B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B237EBC71CA065310031136B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +94,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B237EBC81CA065310031136B /* AudioToolbox.framework in Frameworks */,
+				B237EBC61CA065140031136B /* CFNetwork.framework in Frameworks */,
+				B237EBC41CA065010031136B /* CoreGraphics.framework in Frameworks */,
+				B237EBC21CA064E90031136B /* CoreLocation.framework in Frameworks */,
+				B237EBC01CA064DF0031136B /* QuartzCore.framework in Frameworks */,
+				B237EBBE1CA064CB0031136B /* Security.framework in Frameworks */,
+				B237EBBC1CA064C50031136B /* StoreKit.framework in Frameworks */,
+				B237EBBA1CA064B20031136B /* SystemConfiguration.framework in Frameworks */,
+				B237EBB61CA0644F0031136B /* libz.tbd in Frameworks */,
+				B237EBB41CA064440031136B /* libsqlite3.0.tbd in Frameworks */,
+				B237EBB21CA063D70031136B /* Bolts.framework in Frameworks */,
+				B237EBB01CA049ED0031136B /* ParseUI.framework in Frameworks */,
+				B237EBB81CA064910031136B /* ParseTwitterUtils.framework in Frameworks */,
+				B237EBA91CA040E70031136B /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +131,21 @@
 		B237EB641CA0256F0031136B = {
 			isa = PBXGroup;
 			children = (
+				B237EBC71CA065310031136B /* AudioToolbox.framework */,
+				B237EBC51CA065140031136B /* CFNetwork.framework */,
+				B237EBC31CA065010031136B /* CoreGraphics.framework */,
+				B237EBC11CA064E90031136B /* CoreLocation.framework */,
+				B237EBBF1CA064DF0031136B /* QuartzCore.framework */,
+				B237EBBD1CA064CB0031136B /* Security.framework */,
+				B237EBBB1CA064C50031136B /* StoreKit.framework */,
+				B237EBB91CA064B20031136B /* SystemConfiguration.framework */,
+				B237EBB51CA0644F0031136B /* libz.tbd */,
+				B237EBB31CA064440031136B /* libsqlite3.0.tbd */,
+				B237EBA61CA027680031136B /* parse-library-1.12.0 */,
+				B237EBB11CA063D70031136B /* Bolts.framework */,
+				B237EBB71CA064910031136B /* ParseTwitterUtils.framework */,
+				B237EBAF1CA049ED0031136B /* ParseUI.framework */,
+				B237EBA81CA040E70031136B /* Parse.framework */,
 				B237EB6F1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */,
 				B237EB891CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests */,
 				B237EB941CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests */,
@@ -105,7 +170,11 @@
 				B237EB741CA0256F0031136B /* AppDelegate.m */,
 				B237EB761CA0256F0031136B /* ViewController.h */,
 				B237EB771CA0256F0031136B /* ViewController.m */,
+				B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */,
+				B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */,
 				B237EB791CA0256F0031136B /* Main.storyboard */,
+				B237EBAA1CA045820031136B /* AdminViewController.h */,
+				B237EBAB1CA045820031136B /* AdminViewController.m */,
 				B237EB7C1CA0256F0031136B /* Assets.xcassets */,
 				B237EB7E1CA0256F0031136B /* LaunchScreen.storyboard */,
 				B237EB811CA0256F0031136B /* Info.plist */,
@@ -248,6 +317,7 @@
 			files = (
 				B237EB801CA0256F0031136B /* LaunchScreen.storyboard in Resources */,
 				B237EB7D1CA0256F0031136B /* Assets.xcassets in Resources */,
+				B237EBA71CA027680031136B /* parse-library-1.12.0 in Resources */,
 				B237EB7B1CA0256F0031136B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */,
 				B237EB781CA0256F0031136B /* ViewController.m in Sources */,
+				B237EBAC1CA045820031136B /* AdminViewController.m in Sources */,
 				B237EB751CA0256F0031136B /* AppDelegate.m in Sources */,
 				B237EB721CA0256F0031136B /* main.m in Sources */,
 			);
@@ -416,7 +488,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.12.0",
+					"$(PROJECT_DIR)/NearablesTouristLocationApplicationOwner",
+				);
 				INFOPLIST_FILE = NearablesTouristLocationApplicationOwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +505,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.12.0",
+					"$(PROJECT_DIR)/NearablesTouristLocationApplicationOwner",
+				);
 				INFOPLIST_FILE = NearablesTouristLocationApplicationOwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
