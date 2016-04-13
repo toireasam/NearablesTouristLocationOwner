@@ -147,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1px-3b-CR5" kind="relationship" relationship="rootViewController" id="E1M-IM-TZl"/>
+                        <segue destination="ZrS-gG-VaL" kind="relationship" relationship="rootViewController" id="X4i-8j-H8K"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lom-OB-Wbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZrS-gG-VaL" kind="relationship" relationship="rootViewController" id="bTe-pj-PO7"/>
+                        <segue destination="1px-3b-CR5" kind="relationship" relationship="rootViewController" id="2BG-43-MK7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzm-aw-7ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,6 +192,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="E1M-IM-TZl"/>
+        <segue reference="2BG-43-MK7"/>
     </inferredMetricsTieBreakers>
 </document>
