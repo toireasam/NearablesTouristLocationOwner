@@ -8,6 +8,7 @@
 
 #import "AdminViewController.h"
 #import "Parse/Parse.h"
+#import "Global.h"
 
 @interface AdminViewController ()
 
@@ -20,18 +21,25 @@
 
 @synthesize touristLocationNameTxt;
 NSString *objectID;
+Global *obj;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationItem setHidesBackButton:YES];
     // Do any additional setup after loading the view.
     NSLog(@"from admin screen");
     NSLog(touristLocationNameTxt);
     
     self.touristLocationNameEdit.text = touristLocationNameTxt;
     // self.touirstLocationNameEditField.text = touristLocationNameTxt;
-    
-    
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    touristLocationNameTxt = [standardDefaults stringForKey:@"TouristLocationName"];
+    NSString *username = [standardDefaults stringForKey:@"loggedin"];
+    NSLog(@"tourist location name is");
+    NSLog(touristLocationNameTxt);
+    NSLog(username);
+    [self parse];
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
-    [query whereKey:@"TouristLocationName" equalTo:touristLocationNameTxt];
+    [query whereKey:@"TouristLocation" equalTo:touristLocationNameTxt];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {
@@ -64,7 +72,27 @@ NSString *objectID;
         }
         
     }];
+}
+
+
+
+-(void)parse{
     
+    
+}
+
+    
+-(void)viewDidAppear{
+
+    if(obj.str == NULL)
+    {
+        NSLog(@"null from view did appear");
+    }
+    else
+    {
+        NSLog(@"here in  view did appear");
+        NSLog(obj.str);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

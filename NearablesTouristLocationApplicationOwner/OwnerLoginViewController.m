@@ -10,6 +10,7 @@
 
 #import "AdminViewController.h"
 #import "Parse/Parse.h"
+#import "Global.h"
 
 
 @interface OwnerLoginViewController ()
@@ -20,6 +21,7 @@
 NSString *touristLocationAdmin;
 @synthesize usernameTxtField;
 @synthesize passwordTxtField;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -82,12 +84,17 @@ NSString *touristLocationAdmin;
              
              if([athleteId isEqual: @"yes"])
              {
-                 
+                 NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+                 [standardDefaults setObject:@"in" forKey:@"loggedin"];
+
                  
                  NSLog(@"The athlete id is %@", athleteId);
                  // go to admin
                  NSLog(@"should move to admin screeen");
-                 [self performSegueWithIdentifier:@"admin" sender:self];
+                 NSUserDefaults *standardDefaults2 = [NSUserDefaults standardUserDefaults];
+                 [standardDefaults setObject:touristLocationAdmin forKey:@"TouristLocationName"];
+                 [standardDefaults synchronize];
+              [self dismissViewControllerAnimated:YES completion:nil];
                  NSLog(touristLocationAdmin);
                  
                  
