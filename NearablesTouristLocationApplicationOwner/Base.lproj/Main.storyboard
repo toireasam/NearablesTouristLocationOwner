@@ -136,6 +136,7 @@
                     <connections>
                         <segue destination="TjK-1q-3cq" kind="relationship" relationship="viewControllers" id="ivN-Se-8or"/>
                         <segue destination="OSV-dC-ch4" kind="relationship" relationship="viewControllers" id="8jK-9s-nBI"/>
+                        <segue destination="FcQ-9u-Zab" kind="relationship" relationship="viewControllers" id="qRp-Yu-RFM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJd-sO-usq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,6 +177,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzm-aw-7ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="1163"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Jai-yu-Qka">
+            <objects>
+                <viewController id="FcQ-9u-Zab" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vob-6o-1ZX"/>
+                        <viewControllerLayoutGuide type="bottom" id="AeI-Ss-1Au"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W0h-uw-vQO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UV-98-vhh">
+                                <rect key="frame" x="126" y="175" width="59" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtnClick:" destination="FcQ-9u-Zab" eventType="touchUpInside" id="2gf-pe-l2w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="t0K-lL-1Zt"/>
+                    <navigationItem key="navigationItem" id="FFe-oS-dc3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c4x-bW-vBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="2023"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="INQ-gg-a0O">

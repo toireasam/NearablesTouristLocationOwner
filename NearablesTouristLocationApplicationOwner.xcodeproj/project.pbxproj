@@ -31,6 +31,7 @@
 		B237EBC41CA065010031136B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC31CA065010031136B /* CoreGraphics.framework */; };
 		B237EBC61CA065140031136B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC51CA065140031136B /* CFNetwork.framework */; };
 		B237EBC81CA065310031136B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC71CA065310031136B /* AudioToolbox.framework */; };
+		B296BE251CC2C2ED00E7BDB7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		B237EBC31CA065010031136B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B237EBC51CA065140031136B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B237EBC71CA065310031136B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,8 @@
 				B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */,
 				B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */,
 				B237EB791CA0256F0031136B /* Main.storyboard */,
+				B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */,
+				B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */,
 				B237EBAA1CA045820031136B /* AdminViewController.h */,
 				B237EBAB1CA045820031136B /* AdminViewController.m */,
 				B237EB7C1CA0256F0031136B /* Assets.xcassets */,
@@ -340,6 +345,7 @@
 			files = (
 				B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */,
 				B237EBAC1CA045820031136B /* AdminViewController.m in Sources */,
+				B296BE251CC2C2ED00E7BDB7 /* SettingsViewController.m in Sources */,
 				B237EB751CA0256F0031136B /* AppDelegate.m in Sources */,
 				B237EB721CA0256F0031136B /* main.m in Sources */,
 			);

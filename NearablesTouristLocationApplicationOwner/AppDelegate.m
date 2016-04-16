@@ -26,8 +26,14 @@
     
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
-
+    
+    
+    if ([[standardDefaults stringForKey:@"loggedin"] isEqual: @"out"])
+    {
+        NSLog(@"your logged out");
         [self showLoginScreen:YES];
+    }
+    
     
     
     return YES;
