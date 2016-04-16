@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *galleryBtn;
 @property (nonatomic, strong) NSString *touristLocationNameTxt;
 @property (weak, nonatomic) IBOutlet UIButton *picBtn;
+@property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
 
 
 @end

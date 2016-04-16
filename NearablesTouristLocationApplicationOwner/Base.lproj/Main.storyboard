@@ -60,7 +60,6 @@
         <!--Item-->
         <scene sceneID="f6F-Ww-McX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yaf-7f-Ze7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1px-3b-CR5" customClass="AdminViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e5d-Lo-pVt"/>
@@ -70,25 +69,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdq-jK-RlP">
-                                <rect key="frame" x="49" y="140" width="194" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNE-Zw-dcS">
-                                <rect key="frame" x="55" y="196" width="195" height="30"/>
+                                <rect key="frame" x="55" y="275" width="195" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QwX-RK-raW">
-                                <rect key="frame" x="74" y="263" width="136" height="30"/>
+                                <rect key="frame" x="78" y="308" width="136" height="30"/>
                                 <state key="normal" title="Update information"/>
                                 <connections>
                                     <action selector="buttonClickUpdateInfo:" destination="1px-3b-CR5" eventType="touchUpInside" id="8AA-dV-kKE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btB-y5-R0e" customClass="PFImageView">
-                                <rect key="frame" x="35" y="317" width="240" height="128"/>
+                                <rect key="frame" x="32" y="346" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfe-nP-jII">
                                 <rect key="frame" x="49" y="482" width="46" height="30"/>
@@ -101,12 +95,21 @@
                                     <action selector="btnGalleryClicked:" destination="1px-3b-CR5" eventType="touchUpInside" id="Lh8-YN-PIG"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoH-Jr-5JU">
+                                <rect key="frame" x="-14" y="64" width="320" height="216"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdq-jK-RlP">
+                                <rect key="frame" x="56" y="231" width="194" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CxY-fw-pcU"/>
                     <navigationItem key="navigationItem" id="c1C-kM-2M5"/>
                     <connections>
+                        <outlet property="categoryPicker" destination="IoH-Jr-5JU" id="PIG-rL-L4V"/>
                         <outlet property="galleryBtn" destination="lf4-Xv-Nfj" id="ywO-OC-UKq"/>
                         <outlet property="ivPickedImage" destination="btB-y5-R0e" id="5I4-iE-jSC"/>
                         <outlet property="picBtn" destination="gfe-nP-jII" id="7oF-tL-UVx"/>
@@ -115,8 +118,9 @@
                         <outlet property="updateInfo" destination="QwX-RK-raW" id="8U3-CB-0Qa"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yaf-7f-Ze7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="162"/>
+            <point key="canvasLocation" x="812" y="156"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QGh-nX-D1U">

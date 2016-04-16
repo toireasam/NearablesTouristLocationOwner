@@ -18,10 +18,13 @@
 @synthesize touristLocationNameEdit;
 @synthesize galleryBtn;
 @synthesize picBtn;
+NSMutableArray *pickerData;
+NSString *obj;
+NSString *touristLocation;
+NSString *name;
 
 @synthesize touristLocationNameTxt;
 NSString *objectID;
-Global *obj;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES];
@@ -38,6 +41,9 @@ Global *obj;
     NSLog(touristLocationNameTxt);
     NSLog(username);
     [self parse];
+    self.categoryPicker.dataSource = self;
+    self.categoryPicker.delegate = self;
+
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
     [query whereKey:@"TouristLocation" equalTo:touristLocationNameTxt];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -61,9 +67,14 @@ Global *obj;
                 
                 _touristLocationInfoEdit.text = object[@"Information"];
                 
+                touristLocation = object [@"TouristLocation"];
+                obj = object [@"TouristLocationName"];
+              
                 
                 
             }
+            pickerData = objects;
+            [self.categoryPicker reloadAllComponents];
         }
         else
         {
@@ -81,38 +92,20 @@ Global *obj;
     
 }
 
-    
--(void)viewDidAppear{
-
-    if(obj.str == NULL)
-    {
-        NSLog(@"null from view did appear");
-    }
-    else
-    {
-        NSLog(@"here in  view did appear");
-        NSLog(obj.str);
-    }
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)buttonClickUpdateInfo:(id)sender {
     
-    NSLog(@"I am going to look for ");
-    NSLog(touristLocationNameTxt);
-    
-    NSLog(@"I will update this with ");
-    NSLog(touristLocationNameEdit.text);
+ 
     
     
     // lets do it
     NSData *imageData = UIImagePNGRepresentation(_ivPickedImage.image);
     PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
-    
+    NSLog(objectID);
     // Retrieve the object by id and update info
     [query getObjectInBackgroundWithId:objectID
                                  block:^(PFObject *object, NSError *error) {
@@ -131,6 +124,21 @@ Global *obj;
     //    UIImage *image = [_ivPickedImage image];
     //    NSData *imageData = UIImagePNGRepresentation(image);
     //    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    
+    PFObject *gameScore = [PFObject objectWithClassName:@"TestClass"];
+    gameScore[@"TouristLocationName"] = obj;
+    gameScore[@"TouristLocation"] = touristLocation;
+    gameScore[@"Image"] = imageFile;
+    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded){
+            // object saved
+        }
+        else
+        {
+            // there was a problem
+        }
+    }];
+    
     
     
     
@@ -189,6 +197,45 @@ Global *obj;
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+// The number of columns of data
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return pickerData.count;
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    PFObject *object = pickerData[row];
+    //Assuming "Category" is a string here for your title
+    objectID = object.objectId;
+    obj = object[@"TouristLocationName"];
+    return object[@"TouristLocationName"];
+    
+}
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+     NSLog(@"selected tableview row is %d",row);
+    PFObject *object = pickerData[row];
+    //Assuming "Category" is a string here for your title
+    
+    obj = object[@"TouristLocationName"];
+    NSLog(name);
+    objectID = object.objectId;
+    
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [_touristLocationInfoEdit resignFirstResponder];
+    
 }
 
 
