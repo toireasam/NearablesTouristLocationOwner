@@ -26,13 +26,20 @@
     
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
-    
-    
-    if ([[standardDefaults stringForKey:@"loggedin"] isEqual: @"out"])
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil) {
+       
+            NSLog(@"your logged out");
+            [self showLoginScreen:YES];
+        
+    }
+    else if([[standardDefaults stringForKey:@"loggedin"] isEqual: @"out"])
     {
         NSLog(@"your logged out");
         [self showLoginScreen:YES];
+        
     }
+    
+
     
     
     
