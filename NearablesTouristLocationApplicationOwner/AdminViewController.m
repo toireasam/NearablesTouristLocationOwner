@@ -76,30 +76,42 @@ NSString *artefactObjectID;
 - (IBAction)buttonClickUpdateInfo:(id)sender {
     
     NSData *imageData = UIImagePNGRepresentation(_ivPickedImage.image);
-    PFFile *imageFile = [PFFile fileWithName:@"LocationImage.png" data:imageData];
+    PFFile *imageFile;
+    if(imageData != NULL)
+    {
+        imageFile = [PFFile fileWithName:@"LocationImage.png" data:imageData];
+    }
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
     // Retrieve the object by id and update info
     [query getObjectInBackgroundWithId:artefactObjectID
                                  block:^(PFObject *object, NSError *error) {
   
-                                     object[@"Information"] = _touristLocationInfoEdit.text;
+                                     if(_touristLocationInfoEdit.text.length > 0)
+                                     {
+                                         object[@"Information"] = _touristLocationInfoEdit.text;
+                                               [object saveInBackground];
 
-                                     [object saveInBackground];
+                                     }
+                                
                                  }];
     
-    PFObject *touristLocationImageClass = [PFObject objectWithClassName:@"TestClass"];
-    touristLocationImageClass[@"TouristLocationName"] = insideLocationArtefactName;
-    touristLocationImageClass[@"TouristLocation"] = touristLocationName;
-    touristLocationImageClass[@"Image"] = imageFile;
-    [touristLocationImageClass saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded){
-            // object saved
-        }
-        else
-        {
-            // there was a problem
-        }
-    }];
+    if(imageFile != NULL)
+    {
+        PFObject *touristLocationImageClass = [PFObject objectWithClassName:@"TestClass"];
+        touristLocationImageClass[@"TouristLocationName"] = insideLocationArtefactName;
+        touristLocationImageClass[@"TouristLocation"] = touristLocationName;
+        touristLocationImageClass[@"Image"] = imageFile;
+        [touristLocationImageClass saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded){
+                // object saved
+            }
+            else
+            {
+                // there was a problem
+            }
+        }];
+        
+    }
 }
 
 - (IBAction)btnGalleryClicked:(id)sender {
