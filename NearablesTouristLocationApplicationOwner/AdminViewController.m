@@ -16,17 +16,19 @@
 
 @implementation AdminViewController
 @synthesize galleryBtn;
+@synthesize touristLocationName;
+
 NSArray *pickerData;
 NSString *insideLocationArtefactName;
-@synthesize touristLocationName;
 NSString *artefactObjectID;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES];
-
+    
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     touristLocationName = [standardDefaults stringForKey:@"TouristLocationName"];
-
+    
     _categoryPicker.dataSource = self;
     _categoryPicker.delegate = self;
     
@@ -81,22 +83,22 @@ NSString *artefactObjectID;
     // Retrieve the object by id and update info
     [query getObjectInBackgroundWithId:artefactObjectID
                                  block:^(PFObject *object, NSError *error) {
-  
+                                     
                                      if(_touristLocationInfoEdit.text.length > 0)
                                      {
                                          object[@"Information"] = _touristLocationInfoEdit.text;
-                                               [object saveInBackground];
-
+                                         [object saveInBackground];
+                                         
                                      }
-                                
+                                     
                                  }];
     
     if(imageFile != NULL)
     {
-        PFObject *touristLocationImageClass = [PFObject objectWithClassName:@"TestClass"];
-        touristLocationImageClass[@"TouristLocationName"] = insideLocationArtefactName;
+        PFObject *touristLocationImageClass = [PFObject objectWithClassName:@"InsideTouristLocation"];
+        touristLocationImageClass[@"InsideTouristLocationArtefact"] = insideLocationArtefactName;
         touristLocationImageClass[@"TouristLocation"] = touristLocationName;
-        touristLocationImageClass[@"Image"] = imageFile;
+        touristLocationImageClass[@"ArtefactImage"] = imageFile;
         [touristLocationImageClass saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(succeeded){
                 // object saved
@@ -185,7 +187,6 @@ NSString *artefactObjectID;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [_touristLocationInfoEdit resignFirstResponder];
-    
 }
 
 @end

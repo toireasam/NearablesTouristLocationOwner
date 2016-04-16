@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B22B6FAA1CBEBD7D000A840C /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = B22B6FA91CBEBD7D000A840C /* Global.m */; };
 		B237EB721CA0256F0031136B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB711CA0256F0031136B /* main.m */; };
 		B237EB751CA0256F0031136B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB741CA0256F0031136B /* AppDelegate.m */; };
-		B237EB781CA0256F0031136B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB771CA0256F0031136B /* ViewController.m */; };
 		B237EB7B1CA0256F0031136B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B237EB791CA0256F0031136B /* Main.storyboard */; };
 		B237EB7D1CA0256F0031136B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B237EB7C1CA0256F0031136B /* Assets.xcassets */; };
 		B237EB801CA0256F0031136B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B237EB7E1CA0256F0031136B /* LaunchScreen.storyboard */; };
@@ -53,14 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B22B6FA81CBEBD7D000A840C /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		B22B6FA91CBEBD7D000A840C /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		B237EB6D1CA0256F0031136B /* NearablesTouristLocationApplicationOwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearablesTouristLocationApplicationOwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B237EB711CA0256F0031136B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B237EB731CA0256F0031136B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B237EB741CA0256F0031136B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B237EB761CA0256F0031136B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B237EB771CA0256F0031136B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B237EB7A1CA0256F0031136B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B237EB7C1CA0256F0031136B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B237EB7F1CA0256F0031136B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -171,10 +165,6 @@
 			children = (
 				B237EB731CA0256F0031136B /* AppDelegate.h */,
 				B237EB741CA0256F0031136B /* AppDelegate.m */,
-				B237EB761CA0256F0031136B /* ViewController.h */,
-				B237EB771CA0256F0031136B /* ViewController.m */,
-				B22B6FA81CBEBD7D000A840C /* Global.h */,
-				B22B6FA91CBEBD7D000A840C /* Global.m */,
 				B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */,
 				B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */,
 				B237EB791CA0256F0031136B /* Main.storyboard */,
@@ -348,9 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B22B6FAA1CBEBD7D000A840C /* Global.m in Sources */,
 				B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */,
-				B237EB781CA0256F0031136B /* ViewController.m in Sources */,
 				B237EBAC1CA045820031136B /* AdminViewController.m in Sources */,
 				B237EB751CA0256F0031136B /* AppDelegate.m in Sources */,
 				B237EB721CA0256F0031136B /* main.m in Sources */,

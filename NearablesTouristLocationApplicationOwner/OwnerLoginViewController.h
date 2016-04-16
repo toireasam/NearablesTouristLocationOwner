@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTxtField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTxtField;
 @property (weak, nonatomic) IBOutlet UILabel *promptLbl;
-@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end

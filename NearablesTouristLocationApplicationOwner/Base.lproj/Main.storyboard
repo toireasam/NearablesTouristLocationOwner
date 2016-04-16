@@ -46,7 +46,6 @@
                     <tabBarItem key="tabBarItem" enabled="NO" title="Item" id="VOx-cw-UpO"/>
                     <navigationItem key="navigationItem" id="xH7-n7-ujV"/>
                     <connections>
-                        <outlet property="loginBtn" destination="hXd-G2-aaQ" id="lbx-6y-dxN"/>
                         <outlet property="passwordTxtField" destination="CHo-wX-6XD" id="ej4-Vd-2qq"/>
                         <outlet property="promptLbl" destination="ED6-iY-vbe" id="Cuk-GW-2A0"/>
                         <outlet property="usernameTxtField" destination="1qy-Ki-62x" id="6Xg-ax-1wv"/>
@@ -192,6 +191,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2BG-43-MK7"/>
+        <segue reference="2Ow-G1-AWw"/>
     </inferredMetricsTieBreakers>
 </document>
