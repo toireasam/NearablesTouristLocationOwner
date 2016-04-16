@@ -87,6 +87,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfe-nP-jII">
                                 <rect key="frame" x="49" y="482" width="46" height="30"/>
                                 <state key="normal" title="pic"/>
+                                <connections>
+                                    <action selector="btnCameraClicked:" destination="1px-3b-CR5" eventType="touchUpInside" id="Eva-Ox-Z9d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf4-Xv-Nfj">
                                 <rect key="frame" x="186" y="482" width="72" height="30"/>
@@ -107,7 +110,6 @@
                         <outlet property="categoryPicker" destination="IoH-Jr-5JU" id="PIG-rL-L4V"/>
                         <outlet property="galleryBtn" destination="lf4-Xv-Nfj" id="ywO-OC-UKq"/>
                         <outlet property="ivPickedImage" destination="btB-y5-R0e" id="5I4-iE-jSC"/>
-                        <outlet property="picBtn" destination="gfe-nP-jII" id="7oF-tL-UVx"/>
                         <outlet property="touristLocationInfoEdit" destination="xNE-Zw-dcS" id="dL6-q4-Uxf"/>
                         <outlet property="updateInfo" destination="QwX-RK-raW" id="8U3-CB-0Qa"/>
                     </connections>

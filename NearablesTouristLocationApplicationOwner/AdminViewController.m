@@ -16,12 +16,8 @@
 
 @implementation AdminViewController
 @synthesize galleryBtn;
-@synthesize picBtn;
-NSMutableArray *pickerData;
+NSArray *pickerData;
 NSString *insideLocationArtefactName;
-NSString *touristLocation;
-NSString *name;
-
 @synthesize touristLocationName;
 NSString *artefactObjectID;
 - (void)viewDidLoad {
@@ -31,8 +27,8 @@ NSString *artefactObjectID;
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     touristLocationName = [standardDefaults stringForKey:@"TouristLocationName"];
 
-    self.categoryPicker.dataSource = self;
-    self.categoryPicker.delegate = self;
+    _categoryPicker.dataSource = self;
+    _categoryPicker.delegate = self;
     
     [self getLocationArtefacts];
     
@@ -75,7 +71,7 @@ NSString *artefactObjectID;
 
 - (IBAction)buttonClickUpdateInfo:(id)sender {
     
-    NSData *imageData = UIImagePNGRepresentation(_ivPickedImage.image);
+    NSData *imageData = UIImageJPEGRepresentation(_ivPickedImage.image, 0.5);
     PFFile *imageFile;
     if(imageData != NULL)
     {
