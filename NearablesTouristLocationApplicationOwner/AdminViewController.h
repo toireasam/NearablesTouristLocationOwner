@@ -14,12 +14,11 @@
     UIPopoverController *popover;
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *touristLocationNameEdit;
 @property (weak, nonatomic) IBOutlet UITextField *touristLocationInfoEdit;
 @property (weak, nonatomic) IBOutlet UIButton *updateInfo;
 @property (weak, nonatomic) IBOutlet UIImageView *ivPickedImage;
 @property (weak, nonatomic) IBOutlet UIButton *galleryBtn;
-@property (nonatomic, strong) NSString *touristLocationNameTxt;
+@property (nonatomic, strong) NSString *touristLocationName;
 @property (weak, nonatomic) IBOutlet UIButton *picBtn;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
 

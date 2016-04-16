@@ -15,43 +15,36 @@
 @end
 
 @implementation AdminViewController
-@synthesize touristLocationNameEdit;
 @synthesize galleryBtn;
 @synthesize picBtn;
 NSMutableArray *pickerData;
-NSString *obj;
+NSString *insideLocationArtefactName;
 NSString *touristLocation;
 NSString *name;
 
-@synthesize touristLocationNameTxt;
-NSString *objectID;
+@synthesize touristLocationName;
+NSString *artefactObjectID;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES];
-    // Do any additional setup after loading the view.
-    NSLog(@"from admin screen");
-    NSLog(touristLocationNameTxt);
-    
-    self.touristLocationNameEdit.text = touristLocationNameTxt;
-    // self.touirstLocationNameEditField.text = touristLocationNameTxt;
+
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    touristLocationNameTxt = [standardDefaults stringForKey:@"TouristLocationName"];
-    NSString *username = [standardDefaults stringForKey:@"loggedin"];
-    NSLog(@"tourist location name is");
-    NSLog(touristLocationNameTxt);
-    NSLog(username);
-    [self parse];
+    touristLocationName = [standardDefaults stringForKey:@"TouristLocationName"];
+
     self.categoryPicker.dataSource = self;
     self.categoryPicker.delegate = self;
+    
+    [self getLocationArtefacts];
+    
+}
 
+-(void)getLocationArtefacts
+{
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
-    [query whereKey:@"TouristLocation" equalTo:touristLocationNameTxt];
+    [query whereKey:@"TouristLocation" equalTo:touristLocationName];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
-            // Do something with the found objects
             if(objects.count == 0)
             {
                 // No beacons were found
@@ -59,20 +52,10 @@ NSString *objectID;
             }
             for (PFObject *object in objects)
             {
-                
-                NSLog(@"%@", object.objectId);
-                NSLog(@"%@",object);
-                objectID = object.objectId;
-                self.touristLocationNameEdit.text = object[@"TouristLocationName"];
-                
-                _touristLocationInfoEdit.text = object[@"Information"];
-                
-                touristLocation = object [@"TouristLocation"];
-                obj = object [@"TouristLocationName"];
-              
-                
-                
+                artefactObjectID = object.objectId;
+                insideLocationArtefactName = object [@"InsideTouristLocationArtefact"];
             }
+            
             pickerData = objects;
             [self.categoryPicker reloadAllComponents];
         }
@@ -85,51 +68,30 @@ NSString *objectID;
     }];
 }
 
-
-
--(void)parse{
-    
-    
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)buttonClickUpdateInfo:(id)sender {
     
- 
-    
-    
-    // lets do it
     NSData *imageData = UIImagePNGRepresentation(_ivPickedImage.image);
-    PFFile *imageFile = [PFFile fileWithName:@"Profileimage.png" data:imageData];
+    PFFile *imageFile = [PFFile fileWithName:@"LocationImage.png" data:imageData];
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
-    NSLog(objectID);
     // Retrieve the object by id and update info
-    [query getObjectInBackgroundWithId:objectID
+    [query getObjectInBackgroundWithId:artefactObjectID
                                  block:^(PFObject *object, NSError *error) {
-                                     // Now let's update it with some new data. In this case, only cheatMode and score
-                                     // will get sent to the cloud. playerName hasn't changed.
+  
                                      object[@"Information"] = _touristLocationInfoEdit.text;
-                                     // object[@"score"] = @1338;
-                                     object[@"LocationImage"] = imageFile;
+
                                      [object saveInBackground];
                                  }];
     
-    // save image in background now
-    
-    
-    
-    //    UIImage *image = [_ivPickedImage image];
-    //    NSData *imageData = UIImagePNGRepresentation(image);
-    //    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-    
-    PFObject *gameScore = [PFObject objectWithClassName:@"TestClass"];
-    gameScore[@"TouristLocationName"] = obj;
-    gameScore[@"TouristLocation"] = touristLocation;
-    gameScore[@"Image"] = imageFile;
-    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    PFObject *touristLocationImageClass = [PFObject objectWithClassName:@"TestClass"];
+    touristLocationImageClass[@"TouristLocationName"] = insideLocationArtefactName;
+    touristLocationImageClass[@"TouristLocation"] = touristLocationName;
+    touristLocationImageClass[@"Image"] = imageFile;
+    [touristLocationImageClass saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if(succeeded){
             // object saved
         }
@@ -138,22 +100,8 @@ NSString *objectID;
             // there was a problem
         }
     }];
-    
-    
-    
-    
 }
 
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 - (IBAction)btnGalleryClicked:(id)sender {
     
     ipc = [[UIImagePickerController alloc] init];
@@ -166,8 +114,8 @@ NSString *objectID;
         popover=[[UIPopoverController alloc]initWithContentViewController:ipc];
         [popover presentPopoverFromRect:galleryBtn.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     }
-    
 }
+
 - (IBAction)btnCameraClicked:(id)sender {
     
     ipc = [[UIImagePickerController alloc] init];
@@ -194,50 +142,42 @@ NSString *objectID;
     }
     _ivPickedImage.image = [info objectForKey:UIImagePickerControllerOriginalImage];
 }
+
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-// The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
 
-// The number of rows of data
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return pickerData.count;
 }
 
-// The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     PFObject *object = pickerData[row];
-    //Assuming "Category" is a string here for your title
-    objectID = object.objectId;
-    obj = object[@"TouristLocationName"];
-    return object[@"TouristLocationName"];
+    artefactObjectID = object.objectId;
+    insideLocationArtefactName = object[@"InsideTouristLocationArtefact"];
+    return object[@"InsideTouristLocationArtefact"];
     
 }
+
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-     NSLog(@"selected tableview row is %d",row);
     PFObject *object = pickerData[row];
-    //Assuming "Category" is a string here for your title
-    
-    obj = object[@"TouristLocationName"];
-    NSLog(name);
-    objectID = object.objectId;
-    
+    insideLocationArtefactName = object[@"InsideTouristLocationArtefact"];
+    artefactObjectID = object.objectId;
 }
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [_touristLocationInfoEdit resignFirstResponder];
     
 }
-
-
 
 @end

@@ -130,8 +130,7 @@ NSString *touristLocationAdmin;
         
         NSLog(@"tourist location admin is");
         NSLog(touristLocationAdmin);
-        nextVC.touristLocationNameTxt = touristLocationAdmin;
-       nextVC.touristLocationNameEdit = touristLocationAdmin;
+
         
     }
 }

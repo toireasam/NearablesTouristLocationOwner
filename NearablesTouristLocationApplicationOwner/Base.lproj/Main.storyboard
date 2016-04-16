@@ -98,11 +98,6 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoH-Jr-5JU">
                                 <rect key="frame" x="-14" y="64" width="320" height="216"/>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdq-jK-RlP">
-                                <rect key="frame" x="56" y="231" width="194" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -114,7 +109,6 @@
                         <outlet property="ivPickedImage" destination="btB-y5-R0e" id="5I4-iE-jSC"/>
                         <outlet property="picBtn" destination="gfe-nP-jII" id="7oF-tL-UVx"/>
                         <outlet property="touristLocationInfoEdit" destination="xNE-Zw-dcS" id="dL6-q4-Uxf"/>
-                        <outlet property="touristLocationNameEdit" destination="cdq-jK-RlP" id="8mL-Eu-MbS"/>
                         <outlet property="updateInfo" destination="QwX-RK-raW" id="8U3-CB-0Qa"/>
                     </connections>
                 </viewController>
