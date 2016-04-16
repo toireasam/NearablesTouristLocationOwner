@@ -40,6 +40,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eI-Ib-0L0">
+                                <rect key="frame" x="137" y="420" width="75" height="30"/>
+                                <state key="normal" title="Forgot?"/>
+                                <connections>
+                                    <action selector="forgotPasswordBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVf-VF-wgB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
