@@ -73,9 +73,18 @@ NSString *artefactObjectID;
 
 - (IBAction)buttonClickUpdateInfo:(id)sender {
     
-    NSData *imageData = UIImageJPEGRepresentation(_ivPickedImage.image, 0.5);
     PFFile *imageFile;
-    if(imageData != NULL)
+    
+    CGRect rect = CGRectMake(0,0,200,200);
+    UIGraphicsBeginImageContext( rect.size );
+    [_ivPickedImage.image drawInRect:rect];
+    UIImage *resizeForParse = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSData *imageData = UIImagePNGRepresentation(resizeForParse);
+    UIImage *img=[UIImage imageWithData:imageData];
+    
+    if(img != NULL)
     {
         imageFile = [PFFile fileWithName:@"LocationImage.png" data:imageData];
     }
