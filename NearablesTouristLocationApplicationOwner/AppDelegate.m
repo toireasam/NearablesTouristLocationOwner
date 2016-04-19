@@ -1,10 +1,4 @@
-//
 //  AppDelegate.m
-//  NearablesTouristLocationApplicationOwner
-//
-//  Created by Toireasa Moley on 21/03/2016.
-//  Copyright © 2016 Toireasa Moley. All rights reserved.
-//
 
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
@@ -16,32 +10,24 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
-    // Initialize Parse.
+    // Key to interact with Parse API
     [Parse setApplicationId:@"ZoFHgn6IfSnsuYTSkvZOkecTejs8Wa00dpEWU6go"
                   clientKey:@"RcYERJZfY2fDRpmz48rs7i6DpLWshMtuMliLA5qP"];
     
+    // Present login screen if user has not yet logged in
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil) {
-       
-            NSLog(@"your logged out");
-            [self showLoginScreen:YES];
+        
+        [self showLoginScreen:YES];
         
     }
     else if([[standardDefaults stringForKey:@"loggedin"] isEqual: @"out"])
     {
-        NSLog(@"your logged out");
         [self showLoginScreen:YES];
-        
     }
-    
-
-    
-    
     
     return YES;
 }

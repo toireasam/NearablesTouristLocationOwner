@@ -15,14 +15,9 @@
 		B237EB8B1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */; };
 		B237EB961CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */; };
 		B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */; };
-		B237EBA71CA027680031136B /* parse-library-1.12.0 in Resources */ = {isa = PBXBuildFile; fileRef = B237EBA61CA027680031136B /* parse-library-1.12.0 */; };
-		B237EBA91CA040E70031136B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBA81CA040E70031136B /* Parse.framework */; };
-		B237EBAC1CA045820031136B /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBAB1CA045820031136B /* AdminViewController.m */; };
-		B237EBB01CA049ED0031136B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBAF1CA049ED0031136B /* ParseUI.framework */; };
-		B237EBB21CA063D70031136B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB11CA063D70031136B /* Bolts.framework */; };
+		B237EBAC1CA045820031136B /* UpdateAttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBAB1CA045820031136B /* UpdateAttractionViewController.m */; };
 		B237EBB41CA064440031136B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB31CA064440031136B /* libsqlite3.0.tbd */; };
 		B237EBB61CA0644F0031136B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB51CA0644F0031136B /* libz.tbd */; };
-		B237EBB81CA064910031136B /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB71CA064910031136B /* ParseTwitterUtils.framework */; };
 		B237EBBA1CA064B20031136B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB91CA064B20031136B /* SystemConfiguration.framework */; };
 		B237EBBC1CA064C50031136B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBBB1CA064C50031136B /* StoreKit.framework */; };
 		B237EBBE1CA064CB0031136B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBBD1CA064CB0031136B /* Security.framework */; };
@@ -31,6 +26,15 @@
 		B237EBC41CA065010031136B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC31CA065010031136B /* CoreGraphics.framework */; };
 		B237EBC61CA065140031136B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC51CA065140031136B /* CFNetwork.framework */; };
 		B237EBC81CA065310031136B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBC71CA065310031136B /* AudioToolbox.framework */; };
+		B2886D5C1CC6A01600B44663 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2886D5B1CC6A01600B44663 /* Bolts.framework */; };
+		B2886D5E1CC6A01B00B44663 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2886D5D1CC6A01B00B44663 /* Parse.framework */; };
+		B2886D601CC6A02000B44663 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2886D5F1CC6A02000B44663 /* ParseFacebookUtils.framework */; };
+		B2886D621CC6A02400B44663 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2886D611CC6A02400B44663 /* ParseFacebookUtilsV4.framework */; };
+		B2886D641CC6A02900B44663 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2886D631CC6A02900B44663 /* ParseTwitterUtils.framework */; };
+		B2886D661CC6A02D00B44663 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2886D651CC6A02D00B44663 /* ParseUI.framework */; };
+		B2886D711CC6A6EE00B44663 /* AdminUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B2886D701CC6A6EE00B44663 /* AdminUser.m */; };
+		B2886D741CC6AD1F00B44663 /* TouristLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2886D731CC6AD1F00B44663 /* TouristLocation.m */; };
+		B2886D771CC6AE5900B44663 /* TouristLocationArtefact.m in Sources */ = {isa = PBXBuildFile; fileRef = B2886D761CC6AE5900B44663 /* TouristLocationArtefact.m */; };
 		B296BE251CC2C2ED00E7BDB7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B237EB6D1CA0256F0031136B /* NearablesTouristLocationApplicationOwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearablesTouristLocationApplicationOwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B237EB6D1CA0256F0031136B /* bAdventurousOwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bAdventurousOwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B237EB711CA0256F0031136B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B237EB731CA0256F0031136B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B237EB741CA0256F0031136B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,23 +64,18 @@
 		B237EB7C1CA0256F0031136B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B237EB7F1CA0256F0031136B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B237EB811CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B237EB861CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearablesTouristLocationApplicationOwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B237EB861CA0256F0031136B /* bAdventurousOwner.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bAdventurousOwner.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearablesTouristLocationApplicationOwnerTests.m; sourceTree = "<group>"; };
 		B237EB8C1CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B237EB911CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearablesTouristLocationApplicationOwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B237EB911CA0256F0031136B /* bAdventurousOwner.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bAdventurousOwner.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearablesTouristLocationApplicationOwnerUITests.m; sourceTree = "<group>"; };
 		B237EB971CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnerLoginViewController.h; sourceTree = "<group>"; };
-		B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnerLoginViewController.m; sourceTree = "<group>"; };
-		B237EBA61CA027680031136B /* parse-library-1.12.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.12.0"; sourceTree = "<group>"; };
-		B237EBA81CA040E70031136B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.12.0/Parse.framework"; sourceTree = "<group>"; };
-		B237EBAA1CA045820031136B /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
-		B237EBAB1CA045820031136B /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
-		B237EBAF1CA049ED0031136B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.12.0/ParseUI.framework"; sourceTree = "<group>"; };
-		B237EBB11CA063D70031136B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.12.0/Bolts.framework"; sourceTree = "<group>"; };
+		B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OwnerLoginViewController.h; path = NearablesTouristLocationApplicationOwner/OwnerLoginViewController.h; sourceTree = "<group>"; };
+		B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OwnerLoginViewController.m; path = NearablesTouristLocationApplicationOwner/OwnerLoginViewController.m; sourceTree = "<group>"; };
+		B237EBAA1CA045820031136B /* UpdateAttractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateAttractionViewController.h; path = NearablesTouristLocationApplicationOwner/UpdateAttractionViewController.h; sourceTree = "<group>"; };
+		B237EBAB1CA045820031136B /* UpdateAttractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateAttractionViewController.m; path = NearablesTouristLocationApplicationOwner/UpdateAttractionViewController.m; sourceTree = "<group>"; };
 		B237EBB31CA064440031136B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B237EBB51CA0644F0031136B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B237EBB71CA064910031136B /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.12.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
 		B237EBB91CA064B20031136B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B237EBBB1CA064C50031136B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B237EBBD1CA064CB0031136B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -85,8 +84,20 @@
 		B237EBC31CA065010031136B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B237EBC51CA065140031136B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B237EBC71CA065310031136B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B2886D5B1CC6A01600B44663 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.12.0/Bolts.framework"; sourceTree = "<group>"; };
+		B2886D5D1CC6A01B00B44663 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.12.0/Parse.framework"; sourceTree = "<group>"; };
+		B2886D5F1CC6A02000B44663 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.12.0/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		B2886D611CC6A02400B44663 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "parse-library-1.12.0/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		B2886D631CC6A02900B44663 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "parse-library-1.12.0/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		B2886D651CC6A02D00B44663 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "parse-library-1.12.0/ParseUI.framework"; sourceTree = "<group>"; };
+		B2886D6F1CC6A6EE00B44663 /* AdminUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminUser.h; sourceTree = "<group>"; };
+		B2886D701CC6A6EE00B44663 /* AdminUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminUser.m; sourceTree = "<group>"; };
+		B2886D721CC6AD1F00B44663 /* TouristLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocation.h; sourceTree = "<group>"; };
+		B2886D731CC6AD1F00B44663 /* TouristLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristLocation.m; sourceTree = "<group>"; };
+		B2886D751CC6AE5900B44663 /* TouristLocationArtefact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouristLocationArtefact.h; sourceTree = "<group>"; };
+		B2886D761CC6AE5900B44663 /* TouristLocationArtefact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristLocationArtefact.m; sourceTree = "<group>"; };
+		B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = NearablesTouristLocationApplicationOwner/SettingsViewController.h; sourceTree = "<group>"; };
+		B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = NearablesTouristLocationApplicationOwner/SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,20 +105,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2886D5C1CC6A01600B44663 /* Bolts.framework in Frameworks */,
+				B2886D641CC6A02900B44663 /* ParseTwitterUtils.framework in Frameworks */,
+				B2886D661CC6A02D00B44663 /* ParseUI.framework in Frameworks */,
 				B237EBC81CA065310031136B /* AudioToolbox.framework in Frameworks */,
 				B237EBC61CA065140031136B /* CFNetwork.framework in Frameworks */,
 				B237EBC41CA065010031136B /* CoreGraphics.framework in Frameworks */,
 				B237EBC21CA064E90031136B /* CoreLocation.framework in Frameworks */,
+				B2886D601CC6A02000B44663 /* ParseFacebookUtils.framework in Frameworks */,
 				B237EBC01CA064DF0031136B /* QuartzCore.framework in Frameworks */,
+				B2886D5E1CC6A01B00B44663 /* Parse.framework in Frameworks */,
 				B237EBBE1CA064CB0031136B /* Security.framework in Frameworks */,
 				B237EBBC1CA064C50031136B /* StoreKit.framework in Frameworks */,
 				B237EBBA1CA064B20031136B /* SystemConfiguration.framework in Frameworks */,
 				B237EBB61CA0644F0031136B /* libz.tbd in Frameworks */,
 				B237EBB41CA064440031136B /* libsqlite3.0.tbd in Frameworks */,
-				B237EBB21CA063D70031136B /* Bolts.framework in Frameworks */,
-				B237EBB01CA049ED0031136B /* ParseUI.framework in Frameworks */,
-				B237EBB81CA064910031136B /* ParseTwitterUtils.framework in Frameworks */,
-				B237EBA91CA040E70031136B /* Parse.framework in Frameworks */,
+				B2886D621CC6A02400B44663 /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,24 +144,10 @@
 		B237EB641CA0256F0031136B = {
 			isa = PBXGroup;
 			children = (
-				B237EBC71CA065310031136B /* AudioToolbox.framework */,
-				B237EBC51CA065140031136B /* CFNetwork.framework */,
-				B237EBC31CA065010031136B /* CoreGraphics.framework */,
-				B237EBC11CA064E90031136B /* CoreLocation.framework */,
-				B237EBBF1CA064DF0031136B /* QuartzCore.framework */,
-				B237EBBD1CA064CB0031136B /* Security.framework */,
-				B237EBBB1CA064C50031136B /* StoreKit.framework */,
-				B237EBB91CA064B20031136B /* SystemConfiguration.framework */,
-				B237EBB51CA0644F0031136B /* libz.tbd */,
-				B237EBB31CA064440031136B /* libsqlite3.0.tbd */,
-				B237EBA61CA027680031136B /* parse-library-1.12.0 */,
-				B237EBB11CA063D70031136B /* Bolts.framework */,
-				B237EBB71CA064910031136B /* ParseTwitterUtils.framework */,
-				B237EBAF1CA049ED0031136B /* ParseUI.framework */,
-				B237EBA81CA040E70031136B /* Parse.framework */,
-				B237EB6F1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */,
-				B237EB891CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests */,
-				B237EB941CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests */,
+				B2886D5A1CC69FE600B44663 /* Parse */,
+				B237EB6F1CA0256F0031136B /* bAdventurousOwner */,
+				B237EB891CA0256F0031136B /* bAdventurousOwnerTests */,
+				B237EB941CA0256F0031136B /* bAdventurousOwnerUITests */,
 				B237EB6E1CA0256F0031136B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,30 +155,27 @@
 		B237EB6E1CA0256F0031136B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B237EB6D1CA0256F0031136B /* NearablesTouristLocationApplicationOwner.app */,
-				B237EB861CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.xctest */,
-				B237EB911CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.xctest */,
+				B237EB6D1CA0256F0031136B /* bAdventurousOwner.app */,
+				B237EB861CA0256F0031136B /* bAdventurousOwner.xctest */,
+				B237EB911CA0256F0031136B /* bAdventurousOwner.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B237EB6F1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */ = {
+		B237EB6F1CA0256F0031136B /* bAdventurousOwner */ = {
 			isa = PBXGroup;
 			children = (
+				B2886D681CC6A40200B44663 /* Controllers */,
+				B2886D671CC6A3FA00B44663 /* Models */,
 				B237EB731CA0256F0031136B /* AppDelegate.h */,
 				B237EB741CA0256F0031136B /* AppDelegate.m */,
-				B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */,
-				B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */,
 				B237EB791CA0256F0031136B /* Main.storyboard */,
-				B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */,
-				B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */,
-				B237EBAA1CA045820031136B /* AdminViewController.h */,
-				B237EBAB1CA045820031136B /* AdminViewController.m */,
 				B237EB7C1CA0256F0031136B /* Assets.xcassets */,
 				B237EB7E1CA0256F0031136B /* LaunchScreen.storyboard */,
 				B237EB811CA0256F0031136B /* Info.plist */,
 				B237EB701CA0256F0031136B /* Supporting Files */,
 			);
+			name = bAdventurousOwner;
 			path = NearablesTouristLocationApplicationOwner;
 			sourceTree = "<group>";
 		};
@@ -191,30 +187,83 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B237EB891CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests */ = {
+		B237EB891CA0256F0031136B /* bAdventurousOwnerTests */ = {
 			isa = PBXGroup;
 			children = (
 				B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */,
 				B237EB8C1CA0256F0031136B /* Info.plist */,
 			);
+			name = bAdventurousOwnerTests;
 			path = NearablesTouristLocationApplicationOwnerTests;
 			sourceTree = "<group>";
 		};
-		B237EB941CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests */ = {
+		B237EB941CA0256F0031136B /* bAdventurousOwnerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */,
 				B237EB971CA0256F0031136B /* Info.plist */,
 			);
+			name = bAdventurousOwnerUITests;
 			path = NearablesTouristLocationApplicationOwnerUITests;
+			sourceTree = "<group>";
+		};
+		B2886D5A1CC69FE600B44663 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				B237EBB31CA064440031136B /* libsqlite3.0.tbd */,
+				B237EBB51CA0644F0031136B /* libz.tbd */,
+				B2886D651CC6A02D00B44663 /* ParseUI.framework */,
+				B2886D631CC6A02900B44663 /* ParseTwitterUtils.framework */,
+				B2886D611CC6A02400B44663 /* ParseFacebookUtilsV4.framework */,
+				B2886D5F1CC6A02000B44663 /* ParseFacebookUtils.framework */,
+				B2886D5D1CC6A01B00B44663 /* Parse.framework */,
+				B2886D5B1CC6A01600B44663 /* Bolts.framework */,
+				B237EBB91CA064B20031136B /* SystemConfiguration.framework */,
+				B237EBBB1CA064C50031136B /* StoreKit.framework */,
+				B237EBBD1CA064CB0031136B /* Security.framework */,
+				B237EBBF1CA064DF0031136B /* QuartzCore.framework */,
+				B237EBC11CA064E90031136B /* CoreLocation.framework */,
+				B237EBC31CA065010031136B /* CoreGraphics.framework */,
+				B237EBC51CA065140031136B /* CFNetwork.framework */,
+				B237EBC71CA065310031136B /* AudioToolbox.framework */,
+			);
+			name = Parse;
+			sourceTree = "<group>";
+		};
+		B2886D671CC6A3FA00B44663 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2886D751CC6AE5900B44663 /* TouristLocationArtefact.h */,
+				B2886D761CC6AE5900B44663 /* TouristLocationArtefact.m */,
+				B2886D721CC6AD1F00B44663 /* TouristLocation.h */,
+				B2886D731CC6AD1F00B44663 /* TouristLocation.m */,
+				B2886D6F1CC6A6EE00B44663 /* AdminUser.h */,
+				B2886D701CC6A6EE00B44663 /* AdminUser.m */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B2886D681CC6A40200B44663 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */,
+				B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */,
+				B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */,
+				B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */,
+				B237EBAA1CA045820031136B /* UpdateAttractionViewController.h */,
+				B237EBAB1CA045820031136B /* UpdateAttractionViewController.m */,
+			);
+			name = Controllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B237EB6C1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */ = {
+		B237EB6C1CA0256F0031136B /* bAdventurousOwner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B237EB9A1CA0256F0031136B /* Build configuration list for PBXNativeTarget "NearablesTouristLocationApplicationOwner" */;
+			buildConfigurationList = B237EB9A1CA0256F0031136B /* Build configuration list for PBXNativeTarget "bAdventurousOwner" */;
 			buildPhases = (
 				B237EB691CA0256F0031136B /* Sources */,
 				B237EB6A1CA0256F0031136B /* Frameworks */,
@@ -224,14 +273,14 @@
 			);
 			dependencies = (
 			);
-			name = NearablesTouristLocationApplicationOwner;
+			name = bAdventurousOwner;
 			productName = NearablesTouristLocationApplicationOwner;
-			productReference = B237EB6D1CA0256F0031136B /* NearablesTouristLocationApplicationOwner.app */;
+			productReference = B237EB6D1CA0256F0031136B /* bAdventurousOwner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B237EB851CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests */ = {
+		B237EB851CA0256F0031136B /* bAdventurousOwnerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B237EB9D1CA0256F0031136B /* Build configuration list for PBXNativeTarget "NearablesTouristLocationApplicationOwnerTests" */;
+			buildConfigurationList = B237EB9D1CA0256F0031136B /* Build configuration list for PBXNativeTarget "bAdventurousOwnerTests" */;
 			buildPhases = (
 				B237EB821CA0256F0031136B /* Sources */,
 				B237EB831CA0256F0031136B /* Frameworks */,
@@ -242,14 +291,14 @@
 			dependencies = (
 				B237EB881CA0256F0031136B /* PBXTargetDependency */,
 			);
-			name = NearablesTouristLocationApplicationOwnerTests;
+			name = bAdventurousOwnerTests;
 			productName = NearablesTouristLocationApplicationOwnerTests;
-			productReference = B237EB861CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.xctest */;
+			productReference = B237EB861CA0256F0031136B /* bAdventurousOwner.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B237EB901CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests */ = {
+		B237EB901CA0256F0031136B /* bAdventurousOwnerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B237EBA01CA0256F0031136B /* Build configuration list for PBXNativeTarget "NearablesTouristLocationApplicationOwnerUITests" */;
+			buildConfigurationList = B237EBA01CA0256F0031136B /* Build configuration list for PBXNativeTarget "bAdventurousOwnerUITests" */;
 			buildPhases = (
 				B237EB8D1CA0256F0031136B /* Sources */,
 				B237EB8E1CA0256F0031136B /* Frameworks */,
@@ -260,9 +309,9 @@
 			dependencies = (
 				B237EB931CA0256F0031136B /* PBXTargetDependency */,
 			);
-			name = NearablesTouristLocationApplicationOwnerUITests;
+			name = bAdventurousOwnerUITests;
 			productName = NearablesTouristLocationApplicationOwnerUITests;
-			productReference = B237EB911CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.xctest */;
+			productReference = B237EB911CA0256F0031136B /* bAdventurousOwner.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -290,7 +339,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B237EB681CA0256F0031136B /* Build configuration list for PBXProject "NearablesTouristLocationApplicationOwner" */;
+			buildConfigurationList = B237EB681CA0256F0031136B /* Build configuration list for PBXProject "bAdventurousOwner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -303,9 +352,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B237EB6C1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */,
-				B237EB851CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests */,
-				B237EB901CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests */,
+				B237EB6C1CA0256F0031136B /* bAdventurousOwner */,
+				B237EB851CA0256F0031136B /* bAdventurousOwnerTests */,
+				B237EB901CA0256F0031136B /* bAdventurousOwnerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +366,6 @@
 			files = (
 				B237EB801CA0256F0031136B /* LaunchScreen.storyboard in Resources */,
 				B237EB7D1CA0256F0031136B /* Assets.xcassets in Resources */,
-				B237EBA71CA027680031136B /* parse-library-1.12.0 in Resources */,
 				B237EB7B1CA0256F0031136B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,10 +391,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2886D741CC6AD1F00B44663 /* TouristLocation.m in Sources */,
+				B2886D771CC6AE5900B44663 /* TouristLocationArtefact.m in Sources */,
 				B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */,
-				B237EBAC1CA045820031136B /* AdminViewController.m in Sources */,
+				B237EBAC1CA045820031136B /* UpdateAttractionViewController.m in Sources */,
 				B296BE251CC2C2ED00E7BDB7 /* SettingsViewController.m in Sources */,
 				B237EB751CA0256F0031136B /* AppDelegate.m in Sources */,
+				B2886D711CC6A6EE00B44663 /* AdminUser.m in Sources */,
 				B237EB721CA0256F0031136B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,12 +423,12 @@
 /* Begin PBXTargetDependency section */
 		B237EB881CA0256F0031136B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B237EB6C1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */;
+			target = B237EB6C1CA0256F0031136B /* bAdventurousOwner */;
 			targetProxy = B237EB871CA0256F0031136B /* PBXContainerItemProxy */;
 		};
 		B237EB931CA0256F0031136B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B237EB6C1CA0256F0031136B /* NearablesTouristLocationApplicationOwner */;
+			target = B237EB6C1CA0256F0031136B /* bAdventurousOwner */;
 			targetProxy = B237EB921CA0256F0031136B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -497,7 +548,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwner;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bAdventurousOwner;
 			};
 			name = Debug;
 		};
@@ -514,7 +565,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwner;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bAdventurousOwner;
 			};
 			name = Release;
 		};
@@ -525,8 +576,8 @@
 				INFOPLIST_FILE = NearablesTouristLocationApplicationOwnerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwnerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearablesTouristLocationApplicationOwner.app/NearablesTouristLocationApplicationOwner";
+				PRODUCT_NAME = bAdventurousOwner;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bAdventurousOwner.app/bAdventurousOwner";
 			};
 			name = Debug;
 		};
@@ -537,8 +588,8 @@
 				INFOPLIST_FILE = NearablesTouristLocationApplicationOwnerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwnerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearablesTouristLocationApplicationOwner.app/NearablesTouristLocationApplicationOwner";
+				PRODUCT_NAME = bAdventurousOwner;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bAdventurousOwner.app/bAdventurousOwner";
 			};
 			name = Release;
 		};
@@ -548,7 +599,7 @@
 				INFOPLIST_FILE = NearablesTouristLocationApplicationOwnerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwnerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bAdventurousOwner;
 				TEST_TARGET_NAME = NearablesTouristLocationApplicationOwner;
 				USES_XCTRUNNER = YES;
 			};
@@ -560,7 +611,7 @@
 				INFOPLIST_FILE = NearablesTouristLocationApplicationOwnerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = toireasa.NearablesTouristLocationApplicationOwnerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = bAdventurousOwner;
 				TEST_TARGET_NAME = NearablesTouristLocationApplicationOwner;
 				USES_XCTRUNNER = YES;
 			};
@@ -569,7 +620,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B237EB681CA0256F0031136B /* Build configuration list for PBXProject "NearablesTouristLocationApplicationOwner" */ = {
+		B237EB681CA0256F0031136B /* Build configuration list for PBXProject "bAdventurousOwner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B237EB981CA0256F0031136B /* Debug */,
@@ -578,7 +629,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B237EB9A1CA0256F0031136B /* Build configuration list for PBXNativeTarget "NearablesTouristLocationApplicationOwner" */ = {
+		B237EB9A1CA0256F0031136B /* Build configuration list for PBXNativeTarget "bAdventurousOwner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B237EB9B1CA0256F0031136B /* Debug */,
@@ -587,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B237EB9D1CA0256F0031136B /* Build configuration list for PBXNativeTarget "NearablesTouristLocationApplicationOwnerTests" */ = {
+		B237EB9D1CA0256F0031136B /* Build configuration list for PBXNativeTarget "bAdventurousOwnerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B237EB9E1CA0256F0031136B /* Debug */,
@@ -596,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B237EBA01CA0256F0031136B /* Build configuration list for PBXNativeTarget "NearablesTouristLocationApplicationOwnerUITests" */ = {
+		B237EBA01CA0256F0031136B /* Build configuration list for PBXNativeTarget "bAdventurousOwnerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B237EBA11CA0256F0031136B /* Debug */,

@@ -1,45 +1,39 @@
-//
-//  AdminViewController.m
-//  NearablesTouristLocationApplication
-//
-//  Created by Toireasa Moley on 19/03/2016.
-//  Copyright © 2016 Estimote. All rights reserved.
-//
+//  UpdateAttractionViewController.m
 
-#import "AdminViewController.h"
+#import "UpdateAttractionViewController.h"
 #import "Parse/Parse.h"
-#import "Global.h"
+#import "TouristLocation.h"
+#import "TouristLocationArtefact.h"
 
-@interface AdminViewController ()
+@interface UpdateAttractionViewController ()
 
 @end
 
-@implementation AdminViewController
-@synthesize galleryBtn;
-@synthesize touristLocationName;
+@implementation UpdateAttractionViewController
 
+@synthesize galleryBtn;
 NSArray *pickerData;
-NSString *insideLocationArtefactName;
-NSString *artefactObjectID;
+TouristLocation *touristLocation;
+TouristLocationArtefact *touristLocationArtefact;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES];
     
+    touristLocation = [[TouristLocation alloc]init];
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    touristLocationName = [standardDefaults stringForKey:@"TouristLocationName"];
+    touristLocation.touristLocationName = [standardDefaults stringForKey:@"TouristLocationName"];
     
     _categoryPicker.dataSource = self;
     _categoryPicker.delegate = self;
     
     [self getLocationArtefacts];
-    
 }
 
 -(void)getLocationArtefacts
 {
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
-    [query whereKey:@"TouristLocation" equalTo:touristLocationName];
+    [query whereKey:@"TouristLocation" equalTo:touristLocation.touristLocationName];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error)
         {
@@ -50,8 +44,9 @@ NSString *artefactObjectID;
             }
             for (PFObject *object in objects)
             {
-                artefactObjectID = object.objectId;
-                insideLocationArtefactName = object [@"InsideTouristLocationArtefact"];
+                touristLocationArtefact = [[TouristLocationArtefact alloc]init];
+                touristLocationArtefact.artefactID = object.objectId;
+                touristLocationArtefact.artefactName = object [@"InsideTouristLocationArtefact"];
             }
             
             pickerData = objects;
@@ -90,12 +85,12 @@ NSString *artefactObjectID;
     }
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
     // Retrieve the object by id and update info
-    [query getObjectInBackgroundWithId:artefactObjectID
+    [query getObjectInBackgroundWithId:touristLocationArtefact.artefactID
                                  block:^(PFObject *object, NSError *error) {
                                      
-                                     if(_touristLocationInfoEdit.text.length > 0)
+                                     if(_touristLocationInfoTxt.text.length > 0)
                                      {
-                                         object[@"Information"] = _touristLocationInfoEdit.text;
+                                         object[@"Information"] = _touristLocationInfoTxt.text;
                                          [object saveInBackground];
                                          
                                      }
@@ -105,19 +100,18 @@ NSString *artefactObjectID;
     if(imageFile != NULL)
     {
         PFObject *touristLocationImageClass = [PFObject objectWithClassName:@"InsideTouristLocation"];
-        touristLocationImageClass[@"InsideTouristLocationArtefact"] = insideLocationArtefactName;
-        touristLocationImageClass[@"TouristLocation"] = touristLocationName;
+        touristLocationImageClass[@"InsideTouristLocationArtefact"] = touristLocationArtefact.artefactName;
+        touristLocationImageClass[@"TouristLocation"] = touristLocation.touristLocationName;
         touristLocationImageClass[@"ArtefactImage"] = imageFile;
         [touristLocationImageClass saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(succeeded){
-                // object saved
+                // Object saved
             }
             else
             {
-                // there was a problem
+                // There was a problem
             }
         }];
-        
     }
 }
 
@@ -180,22 +174,21 @@ NSString *artefactObjectID;
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     PFObject *object = pickerData[row];
-    artefactObjectID = object.objectId;
-    insideLocationArtefactName = object[@"InsideTouristLocationArtefact"];
+    touristLocationArtefact.artefactID = object.objectId;
+    touristLocationArtefact.artefactName = object[@"InsideTouristLocationArtefact"];
     return object[@"InsideTouristLocationArtefact"];
-    
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     PFObject *object = pickerData[row];
-    insideLocationArtefactName = object[@"InsideTouristLocationArtefact"];
-    artefactObjectID = object.objectId;
+    touristLocationArtefact.artefactName = object[@"InsideTouristLocationArtefact"];
+    touristLocationArtefact.artefactID = object.objectId;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [_touristLocationInfoEdit resignFirstResponder];
+    [_touristLocationInfoTxt resignFirstResponder];
 }
 
 @end

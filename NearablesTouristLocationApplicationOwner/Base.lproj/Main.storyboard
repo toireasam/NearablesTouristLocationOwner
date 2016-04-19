@@ -53,9 +53,9 @@
                     <tabBarItem key="tabBarItem" enabled="NO" title="Item" id="VOx-cw-UpO"/>
                     <navigationItem key="navigationItem" id="xH7-n7-ujV"/>
                     <connections>
-                        <outlet property="passwordTxtField" destination="CHo-wX-6XD" id="ej4-Vd-2qq"/>
-                        <outlet property="promptLbl" destination="ED6-iY-vbe" id="Cuk-GW-2A0"/>
-                        <outlet property="usernameTxtField" destination="1qy-Ki-62x" id="6Xg-ax-1wv"/>
+                        <outlet property="passwordTxt" destination="CHo-wX-6XD" id="Vz3-jH-WP9"/>
+                        <outlet property="promptLblGeneral" destination="ED6-iY-vbe" id="Ryh-Nc-S8I"/>
+                        <outlet property="usernameTxt" destination="1qy-Ki-62x" id="cW1-NM-Rg3"/>
                         <segue destination="ZrS-gG-VaL" kind="push" identifier="admin" id="L4M-VT-q9H"/>
                     </connections>
                 </viewController>
@@ -66,7 +66,7 @@
         <!--Item-->
         <scene sceneID="f6F-Ww-McX">
             <objects>
-                <viewController id="1px-3b-CR5" customClass="AdminViewController" sceneMemberID="viewController">
+                <viewController id="1px-3b-CR5" customClass="UpdateAttractionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e5d-Lo-pVt"/>
                         <viewControllerLayoutGuide type="bottom" id="mqI-xw-2i6"/>
@@ -113,16 +113,16 @@
                     <tabBarItem key="tabBarItem" title="Item" id="CxY-fw-pcU"/>
                     <navigationItem key="navigationItem" id="c1C-kM-2M5"/>
                     <connections>
-                        <outlet property="categoryPicker" destination="IoH-Jr-5JU" id="PIG-rL-L4V"/>
-                        <outlet property="galleryBtn" destination="lf4-Xv-Nfj" id="ywO-OC-UKq"/>
-                        <outlet property="ivPickedImage" destination="btB-y5-R0e" id="5I4-iE-jSC"/>
-                        <outlet property="touristLocationInfoEdit" destination="xNE-Zw-dcS" id="dL6-q4-Uxf"/>
-                        <outlet property="updateInfo" destination="QwX-RK-raW" id="8U3-CB-0Qa"/>
+                        <outlet property="categoryPicker" destination="IoH-Jr-5JU" id="AZj-qx-yu2"/>
+                        <outlet property="galleryBtn" destination="lf4-Xv-Nfj" id="K0k-Rr-iAP"/>
+                        <outlet property="ivPickedImage" destination="btB-y5-R0e" id="zAS-IN-j8m"/>
+                        <outlet property="touristLocationInfoTxt" destination="xNE-Zw-dcS" id="9Pp-J4-QGh"/>
+                        <outlet property="updateInfoBtn" destination="QwX-RK-raW" id="Yz6-ss-gbG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yaf-7f-Ze7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="156"/>
+            <point key="canvasLocation" x="811" y="153"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QGh-nX-D1U">

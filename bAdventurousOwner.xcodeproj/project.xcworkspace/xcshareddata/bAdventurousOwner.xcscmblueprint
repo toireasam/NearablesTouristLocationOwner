@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6796B0504239AFF576700DE61B828C8F228520C4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "97FE7D42984C18A981AF77D0DA4395D9935BEE77" : 0,
+    "6796B0504239AFF576700DE61B828C8F228520C4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0B9C97F1-EB83-4DDC-8AA5-32F9E2B172C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "97FE7D42984C18A981AF77D0DA4395D9935BEE77" : "NearablesTouristLocationApplication\/",
+    "6796B0504239AFF576700DE61B828C8F228520C4" : "NearablesTouristLocationApplicationOwner\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "bAdventurousOwner",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "bAdventurousOwner.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/toireasam\/NearablesTouristLocationOwner.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6796B0504239AFF576700DE61B828C8F228520C4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/toireasam\/NearablesTouristLocation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "97FE7D42984C18A981AF77D0DA4395D9935BEE77"
+    }
+  ]
+}

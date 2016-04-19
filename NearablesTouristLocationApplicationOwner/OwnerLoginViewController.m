@@ -1,38 +1,28 @@
-//
-//  LoginViewController.m
-//  NearablesTouristLocationApplication
-//
-//  Created by Toireasa Moley on 07/03/2016.
-//  Copyright © 2016 Estimote. All rights reserved.
-//
+//  OwnerLoginViewController.m
 
 #import "OwnerLoginViewController.h"
-
-#import "AdminViewController.h"
 #import "Parse/Parse.h"
-#import "Global.h"
-
+#import "AdminUser.h"
 
 @interface OwnerLoginViewController ()
 
 @end
 
 @implementation OwnerLoginViewController
-@synthesize usernameTxtField;
-@synthesize passwordTxtField;
-@synthesize promptLbl;
 
-NSString *adminsTouristLocation;
-
+@synthesize usernameTxt;
+@synthesize passwordTxt;
+@synthesize promptLblGeneral;
+AdminUser *currentUser;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.promptLbl.hidden = YES;
+    
+    self.promptLblGeneral.hidden = YES;
+    
     // Tab the view to dismiss keyboard
     UITapGestureRecognizer *tapViewGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnView)];
     [self.view addGestureRecognizer:tapViewGR];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,52 +31,54 @@ NSString *adminsTouristLocation;
 }
 
 - (void)didTapOnView {
-    [self.usernameTxtField resignFirstResponder];
-    [self.passwordTxtField resignFirstResponder];
+    [self.usernameTxt resignFirstResponder];
+    [self.passwordTxt resignFirstResponder];
 }
 
 - (IBAction)login:(id)sender {
     __weak typeof(self) weakSelf = self;
-    [PFUser logInWithUsernameInBackground:self.usernameTxtField.text
-                                 password:self.passwordTxtField.text
+    [PFUser logInWithUsernameInBackground:self.usernameTxt.text
+                                 password:self.passwordTxt.text
                                     block:^(PFUser *pfUser, NSError *error)
      {
          if (pfUser && !error) {
              
-             weakSelf.promptLbl.hidden = YES;
+             weakSelf.promptLblGeneral.hidden = YES;
              
-             // check if admin
+             // Check if the user is an admin
              NSString *userType = [[PFUser currentUser] objectForKey:@"UserType"];
-             adminsTouristLocation = [[PFUser currentUser] objectForKey:@"TouristLocationName"];
-
+             
              if([userType isEqual: @"Admin"])
              {
-                 NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-                 [standardDefaults setObject:@"in" forKey:@"loggedin"];
-
-                 [standardDefaults setObject:adminsTouristLocation forKey:@"TouristLocationName"];
-                 [standardDefaults synchronize];
-                
-                 [self dismissViewControllerAnimated:YES completion:nil];                 
+                 currentUser = [[AdminUser alloc]init];
+                 currentUser.username = [[PFUser currentUser] objectForKey:@"username"];
+                 [self setUsernameDefaults:currentUser.username];
                  
+                 currentUser.isLoggedIn = TRUE;
+                 [self setLoginStatusDefaults:@"in"];
+                 
+                 currentUser.adminsTouristLocation = [[PFUser currentUser] objectForKey:@"TouristLocationName"];
+                 [self setAdminsTouristLocation:currentUser.adminsTouristLocation];
+                 
+                 [self dismissViewControllerAnimated:YES completion:nil];
              }
              else
              {
-                     // The login failed. Show error.
-                     weakSelf.promptLbl.textColor = [UIColor redColor];
-                     weakSelf.promptLbl.text = @"Incorrect credentials";
-                     weakSelf.promptLbl.hidden = NO;
-             
+                 // The login failed. Show error.
+                 weakSelf.promptLblGeneral.textColor = [UIColor redColor];
+                 weakSelf.promptLblGeneral.text = @"Incorrect credentials";
+                 weakSelf.promptLblGeneral.hidden = NO;
+                 
              }
          }
-             else {
+         else {
              // The login failed. Show error.
-             weakSelf.promptLbl.textColor = [UIColor redColor];
-             weakSelf.promptLbl.text = [error userInfo][@"error"];
-             weakSelf.promptLbl.hidden = NO;
+             weakSelf.promptLblGeneral.textColor = [UIColor redColor];
+             weakSelf.promptLblGeneral.text = [error userInfo][@"error"];
+             weakSelf.promptLblGeneral.hidden = NO;
          }
      }];
-     
+    
 }
 - (IBAction)forgotPasswordBtnClick:(id)sender {
     
@@ -96,7 +88,8 @@ NSString *adminsTouristLocation;
                                               cancelButtonTitle:@"Cancel"
                                               otherButtonTitles:@"Ok", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alertView show];}
+    [alertView show];
+}
 
 - (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
@@ -111,7 +104,25 @@ NSString *adminsTouristLocation;
                                                          otherButtonTitles:nil];
         [alertViewSuccess show];
     }
+}
 
+-(void)setLoginStatusDefaults:(NSString *)loggedInStatus
+{
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults setObject:loggedInStatus forKey:@"loggedin"];
+}
+
+-(void)setUsernameDefaults:(NSString *)username
+{
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults setObject:username forKey:@"username"];
+}
+
+-(void)setAdminsTouristLocation:(NSString *)adminsTouristLocation
+{
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    [standardDefaults setObject:adminsTouristLocation forKey:@"TouristLocationName"];
+    [standardDefaults synchronize];
 }
 
 @end

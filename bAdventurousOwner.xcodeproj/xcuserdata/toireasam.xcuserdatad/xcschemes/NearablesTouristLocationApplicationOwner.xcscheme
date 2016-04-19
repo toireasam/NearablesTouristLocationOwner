@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B237EB6C1CA0256F0031136B"
-               BuildableName = "NearablesTouristLocationApplicationOwner.app"
-               BlueprintName = "NearablesTouristLocationApplicationOwner"
-               ReferencedContainer = "container:NearablesTouristLocationApplicationOwner.xcodeproj">
+               BuildableName = "bAdventurousOwner.app"
+               BlueprintName = "bAdventurousOwner"
+               ReferencedContainer = "container:bAdventurousOwner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B237EB851CA0256F0031136B"
-               BuildableName = "NearablesTouristLocationApplicationOwnerTests.xctest"
-               BlueprintName = "NearablesTouristLocationApplicationOwnerTests"
-               ReferencedContainer = "container:NearablesTouristLocationApplicationOwner.xcodeproj">
+               BuildableName = "bAdventurousOwner.xctest"
+               BlueprintName = "bAdventurousOwnerTests"
+               ReferencedContainer = "container:bAdventurousOwner.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B237EB901CA0256F0031136B"
-               BuildableName = "NearablesTouristLocationApplicationOwnerUITests.xctest"
-               BlueprintName = "NearablesTouristLocationApplicationOwnerUITests"
-               ReferencedContainer = "container:NearablesTouristLocationApplicationOwner.xcodeproj">
+               BuildableName = "bAdventurousOwner.xctest"
+               BlueprintName = "bAdventurousOwnerUITests"
+               ReferencedContainer = "container:bAdventurousOwner.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B237EB6C1CA0256F0031136B"
-            BuildableName = "NearablesTouristLocationApplicationOwner.app"
-            BlueprintName = "NearablesTouristLocationApplicationOwner"
-            ReferencedContainer = "container:NearablesTouristLocationApplicationOwner.xcodeproj">
+            BuildableName = "bAdventurousOwner.app"
+            BlueprintName = "bAdventurousOwner"
+            ReferencedContainer = "container:bAdventurousOwner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B237EB6C1CA0256F0031136B"
-            BuildableName = "NearablesTouristLocationApplicationOwner.app"
-            BlueprintName = "NearablesTouristLocationApplicationOwner"
-            ReferencedContainer = "container:NearablesTouristLocationApplicationOwner.xcodeproj">
+            BuildableName = "bAdventurousOwner.app"
+            BlueprintName = "bAdventurousOwner"
+            ReferencedContainer = "container:bAdventurousOwner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B237EB6C1CA0256F0031136B"
-            BuildableName = "NearablesTouristLocationApplicationOwner.app"
-            BlueprintName = "NearablesTouristLocationApplicationOwner"
-            ReferencedContainer = "container:NearablesTouristLocationApplicationOwner.xcodeproj">
+            BuildableName = "bAdventurousOwner.app"
+            BlueprintName = "bAdventurousOwner"
+            ReferencedContainer = "container:bAdventurousOwner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
