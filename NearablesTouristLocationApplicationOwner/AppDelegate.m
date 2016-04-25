@@ -19,6 +19,8 @@
     // Present login screen if user has not yet logged in
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
+    [[UITabBar appearance] setTintColor:[UIColor darkGrayColor]];
+    
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil) {
         
         [self showLoginScreen:YES];

@@ -120,11 +120,11 @@
             </objects>
             <point key="canvasLocation" x="-210" y="679"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="NPU-SX-rLr">
             <objects>
                 <navigationController id="TjK-1q-3cq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zbt-b5-PYB"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Zbt-b5-PYB"/>
                     <navigationItem key="navigationItem" id="rXy-Vj-gos"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="drP-GQ-qBL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -138,11 +138,11 @@
             </objects>
             <point key="canvasLocation" x="233" y="642"/>
         </scene>
-        <!--Item-->
+        <!--Update-->
         <scene sceneID="LrZ-rt-CYa">
             <objects>
                 <navigationController id="OSV-dC-ch4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FYR-Zb-TmF"/>
+                    <tabBarItem key="tabBarItem" title="Update" image="update" id="FYR-Zb-TmF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="AYu-hc-LBq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -153,13 +153,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzm-aw-7ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-81" y="1615"/>
+            <point key="canvasLocation" x="7" y="1327"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="8Nb-UP-bUY">
             <objects>
                 <navigationController id="6mK-eF-0Iv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LtR-oW-SyF"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="LtR-oW-SyF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="c5v-YC-Kqk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -224,6 +224,22 @@
                     <view key="view" contentMode="scaleToFill" id="7WG-bm-bO5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For attraction owners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBA-XS-9sg">
+                                <rect key="frame" x="97" y="308" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update all your attraction information here and ensure tourists never miss a thing!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9dS-zD-GEj">
+                                <rect key="frame" x="29" y="359" width="316" height="128"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lnz-hS-SaL">
+                                <rect key="frame" x="108" y="185" width="158" height="115"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.6705882353" green="0.85882352939999995" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="XFa-4b-bTa"/>
@@ -319,5 +335,8 @@
     </scenes>
     <resources>
         <image name="b.png" width="508" height="418"/>
+        <image name="home" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+        <image name="update" width="25" height="25"/>
     </resources>
 </document>
