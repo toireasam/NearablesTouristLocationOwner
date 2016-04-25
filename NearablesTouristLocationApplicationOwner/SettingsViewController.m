@@ -9,9 +9,12 @@
 
 @implementation SettingsViewController
 
+@synthesize logout;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    logout.userInteractionEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {

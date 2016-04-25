@@ -113,7 +113,7 @@
                     <connections>
                         <segue destination="TjK-1q-3cq" kind="relationship" relationship="viewControllers" id="ivN-Se-8or"/>
                         <segue destination="OSV-dC-ch4" kind="relationship" relationship="viewControllers" id="8jK-9s-nBI"/>
-                        <segue destination="FcQ-9u-Zab" kind="relationship" relationship="viewControllers" id="qRp-Yu-RFM"/>
+                        <segue destination="6mK-eF-0Iv" kind="relationship" relationship="viewControllers" id="nKS-aH-LZZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJd-sO-usq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,6 +156,23 @@
             <point key="canvasLocation" x="-81" y="1615"/>
         </scene>
         <!--Item-->
+        <scene sceneID="8Nb-UP-bUY">
+            <objects>
+                <navigationController id="6mK-eF-0Iv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LtR-oW-SyF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="c5v-YC-Kqk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FcQ-9u-Zab" kind="relationship" relationship="rootViewController" id="c7y-xr-mvN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OEM-UZ-6D0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="1771"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="Jai-yu-Qka">
             <objects>
                 <viewController id="FcQ-9u-Zab" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -167,18 +184,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Log Out" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCU-xY-GcU">
+                                <rect key="frame" x="54" y="230" width="266" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zc6-tM-U9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UV-98-vhh">
-                                <rect key="frame" x="126" y="175" width="59" height="30"/>
-                                <state key="normal" title="Logout"/>
+                                <rect key="frame" x="54" y="230" width="266" height="41.5"/>
                                 <connections>
                                     <action selector="logoutBtnClick:" destination="FcQ-9u-Zab" eventType="touchUpInside" id="2gf-pe-l2w"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.6705882353" green="0.85882352939999995" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="t0K-lL-1Zt"/>
                     <navigationItem key="navigationItem" id="FFe-oS-dc3"/>
+                    <connections>
+                        <outlet property="logout" destination="VCU-xY-GcU" id="Rp6-va-n37"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4x-bW-vBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
