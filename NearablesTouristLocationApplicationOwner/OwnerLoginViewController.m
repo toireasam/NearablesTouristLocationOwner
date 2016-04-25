@@ -13,6 +13,7 @@
 @synthesize usernameTxt;
 @synthesize passwordTxt;
 @synthesize promptLblGeneral;
+@synthesize loginBtn;
 AdminUser *currentUser;
 
 - (void)viewDidLoad {
@@ -23,6 +24,7 @@ AdminUser *currentUser;
     // Tab the view to dismiss keyboard
     UITapGestureRecognizer *tapViewGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnView)];
     [self.view addGestureRecognizer:tapViewGR];
+    loginBtn.userInteractionEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,7 +68,7 @@ AdminUser *currentUser;
              {
                  // The login failed. Show error.
                  weakSelf.promptLblGeneral.textColor = [UIColor redColor];
-                 weakSelf.promptLblGeneral.text = @"Incorrect credentials";
+                 weakSelf.promptLblGeneral.text = @"Invalid credentials";
                  weakSelf.promptLblGeneral.hidden = NO;
                  
              }

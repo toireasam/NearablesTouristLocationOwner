@@ -13,5 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivPickedImage;
 @property (weak, nonatomic) IBOutlet UIButton *galleryBtn;
 @property (weak, nonatomic) IBOutlet UIPickerView *categoryPicker;
+@property (weak, nonatomic) IBOutlet UITextField *camera;
+@property (weak, nonatomic) IBOutlet UITextField *gallery;
+@property (weak, nonatomic) IBOutlet UIButton *cameraBtn;
+@property (weak, nonatomic) IBOutlet UITextField *update;
 
 @end

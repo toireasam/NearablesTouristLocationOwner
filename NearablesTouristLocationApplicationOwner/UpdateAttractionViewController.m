@@ -12,6 +12,9 @@
 @implementation UpdateAttractionViewController
 
 @synthesize galleryBtn;
+@synthesize update;
+@synthesize gallery;
+@synthesize camera;
 NSArray *pickerData;
 TouristLocation *touristLocation;
 TouristLocationArtefact *touristLocationArtefact;
@@ -28,6 +31,9 @@ TouristLocationArtefact *touristLocationArtefact;
     _categoryPicker.delegate = self;
     
     [self getLocationArtefacts];
+    camera.userInteractionEnabled = NO;
+    gallery.userInteractionEnabled = NO;
+    update.userInteractionEnabled = NO;
 }
 
 -(void)getLocationArtefacts
@@ -92,6 +98,16 @@ TouristLocationArtefact *touristLocationArtefact;
                                      {
                                          object[@"Information"] = _touristLocationInfoTxt.text;
                                          [object saveInBackground];
+                                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                                                         message:@"Your attraction information was successfully updated."
+                                                                                        delegate:nil
+                                                                               cancelButtonTitle:@"OK"
+                                                                               otherButtonTitles:nil];
+                                         [alert show];
+                                         
+                                     }
+                                     else
+                                     {
                                          
                                      }
                                      
@@ -109,7 +125,7 @@ TouristLocationArtefact *touristLocationArtefact;
             }
             else
             {
-                // There was a problem
+                
             }
         }];
     }
