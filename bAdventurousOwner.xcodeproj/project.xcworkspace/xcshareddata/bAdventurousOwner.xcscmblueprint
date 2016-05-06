@@ -1,14 +1,18 @@
 {
   "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6796B0504239AFF576700DE61B828C8F228520C4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "141c86c1-2773-fe4f-bffb-49a7a31383e2" : {
 
+    }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "141c86c1-2773-fe4f-bffb-49a7a31383e2" : 0,
     "97FE7D42984C18A981AF77D0DA4395D9935BEE77" : 0,
     "6796B0504239AFF576700DE61B828C8F228520C4" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0B9C97F1-EB83-4DDC-8AA5-32F9E2B172C1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "141c86c1-2773-fe4f-bffb-49a7a31383e2" : "40084812\/",
     "97FE7D42984C18A981AF77D0DA4395D9935BEE77" : "NearablesTouristLocationApplication\/",
     "6796B0504239AFF576700DE61B828C8F228520C4" : "NearablesTouristLocationApplicationOwner\/"
   },
@@ -16,6 +20,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "bAdventurousOwner.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.eeecs.qub.ac.uk\/svn\/40084812",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "141c86c1-2773-fe4f-bffb-49a7a31383e2"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/toireasam\/NearablesTouristLocationOwner.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

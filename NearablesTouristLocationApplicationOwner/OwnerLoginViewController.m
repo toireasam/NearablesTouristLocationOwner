@@ -54,13 +54,14 @@ AdminUser *currentUser;
              {
                  currentUser = [[AdminUser alloc]init];
                  currentUser.username = [[PFUser currentUser] objectForKey:@"username"];
-                 [self setUsernameDefaults:currentUser.username];
+                 [self setUsername:currentUser.username];
                  
                  currentUser.isLoggedIn = TRUE;
-                 [self setLoginStatusDefaults:@"in"];
+                 [self setUserLogin:@"in"];
                  
                  currentUser.adminsTouristLocation = [[PFUser currentUser] objectForKey:@"TouristLocationName"];
-                 [self setAdminsTouristLocation:currentUser.adminsTouristLocation];
+
+                 [self setAdminLocation:currentUser.adminsTouristLocation];
                  
                  [self dismissViewControllerAnimated:YES completion:nil];
              }
@@ -82,7 +83,7 @@ AdminUser *currentUser;
      }];
     
 }
-- (IBAction)forgotPasswordBtnClick:(id)sender {
+- (IBAction)forgotPassword:(id)sender {
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Email Address"
                                                         message:@"Enter the email for your account:"
@@ -108,22 +109,22 @@ AdminUser *currentUser;
     }
 }
 
--(void)setLoginStatusDefaults:(NSString *)loggedInStatus
+-(void)setUserLogin:(NSString *)loggedInStatus
 {
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     [standardDefaults setObject:loggedInStatus forKey:@"loggedin"];
 }
 
--(void)setUsernameDefaults:(NSString *)username
+-(void)setUsername:(NSString *)username
 {
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     [standardDefaults setObject:username forKey:@"username"];
 }
 
--(void)setAdminsTouristLocation:(NSString *)adminsTouristLocation
+-(void)setAdminLocation:(NSString *)location
 {
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    [standardDefaults setObject:adminsTouristLocation forKey:@"TouristLocationName"];
+    [standardDefaults setObject:location forKey:@"TouristLocationName"];
     [standardDefaults synchronize];
 }
 

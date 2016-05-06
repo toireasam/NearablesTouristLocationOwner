@@ -30,13 +30,13 @@ TouristLocationArtefact *touristLocationArtefact;
     _categoryPicker.dataSource = self;
     _categoryPicker.delegate = self;
     
-    [self getLocationArtefacts];
+    [self getLocationBeacons];
     camera.userInteractionEnabled = NO;
     gallery.userInteractionEnabled = NO;
     update.userInteractionEnabled = NO;
 }
 
--(void)getLocationArtefacts
+-(void)getLocationBeacons
 {
     PFQuery *query = [PFQuery queryWithClassName:@"TouristLocations"];
     [query whereKey:@"TouristLocation" equalTo:touristLocation.touristLocationName];
@@ -72,7 +72,7 @@ TouristLocationArtefact *touristLocationArtefact;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonClickUpdateInfo:(id)sender {
+- (IBAction)updateTouristLocationInformation:(id)sender {
     
     PFFile *imageFile;
     
@@ -131,7 +131,7 @@ TouristLocationArtefact *touristLocationArtefact;
     }
 }
 
-- (IBAction)btnGalleryClicked:(id)sender {
+- (IBAction)openGallery:(id)sender {
     
     ipc = [[UIImagePickerController alloc] init];
     ipc.delegate = self;
@@ -145,7 +145,7 @@ TouristLocationArtefact *touristLocationArtefact;
     }
 }
 
-- (IBAction)btnCameraClicked:(id)sender {
+- (IBAction)openCamera:(id)sender {
     
     ipc = [[UIImagePickerController alloc] init];
     ipc.delegate = self;

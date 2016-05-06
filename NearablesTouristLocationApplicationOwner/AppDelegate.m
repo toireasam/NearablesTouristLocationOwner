@@ -16,20 +16,10 @@
     [Parse setApplicationId:@"ZoFHgn6IfSnsuYTSkvZOkecTejs8Wa00dpEWU6go"
                   clientKey:@"RcYERJZfY2fDRpmz48rs7i6DpLWshMtuMliLA5qP"];
     
-    // Present login screen if user has not yet logged in
-    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
     
     [[UITabBar appearance] setTintColor:[UIColor darkGrayColor]];
     
-    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil) {
-        
-        [self showLoginScreen:YES];
-        
-    }
-    else if([[standardDefaults stringForKey:@"loggedin"] isEqual: @"out"])
-    {
-        [self showLoginScreen:YES];
-    }
+    [self getLoginStatus];
     
     return YES;
 }
@@ -66,6 +56,22 @@
     [self.window.rootViewController presentViewController:viewController
                                                  animated:animated
                                                completion:nil];
+}
+
+-(void)getLoginStatus
+{
+    // Present login screen if user has not yet logged in
+    NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil) {
+        
+        [self showLoginScreen:YES];
+        
+    }
+    else if([[standardDefaults stringForKey:@"loggedin"] isEqual: @"out"])
+    {
+        [self showLoginScreen:YES];
+    }
+    
 }
 
 @end

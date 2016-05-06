@@ -22,7 +22,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)logoutBtnClick:(id)sender {
+- (IBAction)logout:(id)sender {
     
     [self setUserDefaults];
     
