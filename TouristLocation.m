@@ -5,5 +5,7 @@
 @implementation TouristLocation
 
 @synthesize touristLocationName;
+@synthesize touristLocationID;
+@synthesize category;
 
 @end

@@ -6,6 +6,8 @@
 
 @synthesize username;
 @synthesize adminsTouristLocation;
+@synthesize email;
+@synthesize userType;
 @synthesize isLoggedIn;
 
 @end

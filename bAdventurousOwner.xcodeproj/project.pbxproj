@@ -12,8 +12,7 @@
 		B237EB7B1CA0256F0031136B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B237EB791CA0256F0031136B /* Main.storyboard */; };
 		B237EB7D1CA0256F0031136B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B237EB7C1CA0256F0031136B /* Assets.xcassets */; };
 		B237EB801CA0256F0031136B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B237EB7E1CA0256F0031136B /* LaunchScreen.storyboard */; };
-		B237EB8B1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */; };
-		B237EB961CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */; };
+		B237EB8B1CA0256F0031136B /* bAdventurousOwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EB8A1CA0256F0031136B /* bAdventurousOwnerTests.m */; };
 		B237EBA51CA0271F0031136B /* OwnerLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */; };
 		B237EBAC1CA045820031136B /* UpdateAttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B237EBAB1CA045820031136B /* UpdateAttractionViewController.m */; };
 		B237EBB41CA064440031136B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B237EBB31CA064440031136B /* libsqlite3.0.tbd */; };
@@ -36,7 +35,7 @@
 		B2886D741CC6AD1F00B44663 /* TouristLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2886D731CC6AD1F00B44663 /* TouristLocation.m */; };
 		B2886D771CC6AE5900B44663 /* TouristLocationArtefact.m in Sources */ = {isa = PBXBuildFile; fileRef = B2886D761CC6AE5900B44663 /* TouristLocationArtefact.m */; };
 		B296BE251CC2C2ED00E7BDB7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */; };
-		B2C92B9B1CDD1BD7007CB221 /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = B2C92B9A1CDD1BD7007CB221 /* b.png */; };
+		B2F58C6C1CDFCD9100D5D51C /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F58C6B1CDFCD9100D5D51C /* b.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +65,9 @@
 		B237EB7F1CA0256F0031136B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B237EB811CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B237EB861CA0256F0031136B /* bAdventurousOwner.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bAdventurousOwner.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearablesTouristLocationApplicationOwnerTests.m; sourceTree = "<group>"; };
+		B237EB8A1CA0256F0031136B /* bAdventurousOwnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bAdventurousOwnerTests.m; sourceTree = "<group>"; };
 		B237EB8C1CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B237EB911CA0256F0031136B /* bAdventurousOwner.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bAdventurousOwner.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearablesTouristLocationApplicationOwnerUITests.m; sourceTree = "<group>"; };
-		B237EB971CA0256F0031136B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B237EBA31CA0271F0031136B /* OwnerLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OwnerLoginViewController.h; path = NearablesTouristLocationApplicationOwner/OwnerLoginViewController.h; sourceTree = "<group>"; };
 		B237EBA41CA0271F0031136B /* OwnerLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OwnerLoginViewController.m; path = NearablesTouristLocationApplicationOwner/OwnerLoginViewController.m; sourceTree = "<group>"; };
 		B237EBAA1CA045820031136B /* UpdateAttractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateAttractionViewController.h; path = NearablesTouristLocationApplicationOwner/UpdateAttractionViewController.h; sourceTree = "<group>"; };
@@ -99,7 +96,7 @@
 		B2886D761CC6AE5900B44663 /* TouristLocationArtefact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouristLocationArtefact.m; sourceTree = "<group>"; };
 		B296BE231CC2C2ED00E7BDB7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = NearablesTouristLocationApplicationOwner/SettingsViewController.h; sourceTree = "<group>"; };
 		B296BE241CC2C2ED00E7BDB7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = NearablesTouristLocationApplicationOwner/SettingsViewController.m; sourceTree = "<group>"; };
-		B2C92B9A1CDD1BD7007CB221 /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b.png; path = ../40084812/RangingExample/b.png; sourceTree = "<group>"; };
+		B2F58C6B1CDFCD9100D5D51C /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = b.png; path = ../NearablesTouristLocationApplication/RangingExample/b.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,11 +143,10 @@
 		B237EB641CA0256F0031136B = {
 			isa = PBXGroup;
 			children = (
-				B2C92B9A1CDD1BD7007CB221 /* b.png */,
+				B2F58C6B1CDFCD9100D5D51C /* b.png */,
 				B2886D5A1CC69FE600B44663 /* Parse */,
 				B237EB6F1CA0256F0031136B /* bAdventurousOwner */,
 				B237EB891CA0256F0031136B /* bAdventurousOwnerTests */,
-				B237EB941CA0256F0031136B /* bAdventurousOwnerUITests */,
 				B237EB6E1CA0256F0031136B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -193,21 +189,11 @@
 		B237EB891CA0256F0031136B /* bAdventurousOwnerTests */ = {
 			isa = PBXGroup;
 			children = (
-				B237EB8A1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m */,
+				B237EB8A1CA0256F0031136B /* bAdventurousOwnerTests.m */,
 				B237EB8C1CA0256F0031136B /* Info.plist */,
 			);
 			name = bAdventurousOwnerTests;
 			path = NearablesTouristLocationApplicationOwnerTests;
-			sourceTree = "<group>";
-		};
-		B237EB941CA0256F0031136B /* bAdventurousOwnerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B237EB951CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m */,
-				B237EB971CA0256F0031136B /* Info.plist */,
-			);
-			name = bAdventurousOwnerUITests;
-			path = NearablesTouristLocationApplicationOwnerUITests;
 			sourceTree = "<group>";
 		};
 		B2886D5A1CC69FE600B44663 /* Parse */ = {
@@ -368,7 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B237EB801CA0256F0031136B /* LaunchScreen.storyboard in Resources */,
-				B2C92B9B1CDD1BD7007CB221 /* b.png in Resources */,
+				B2F58C6C1CDFCD9100D5D51C /* b.png in Resources */,
 				B237EB7D1CA0256F0031136B /* Assets.xcassets in Resources */,
 				B237EB7B1CA0256F0031136B /* Main.storyboard in Resources */,
 			);
@@ -410,7 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B237EB8B1CA0256F0031136B /* NearablesTouristLocationApplicationOwnerTests.m in Sources */,
+				B237EB8B1CA0256F0031136B /* bAdventurousOwnerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B237EB961CA0256F0031136B /* NearablesTouristLocationApplicationOwnerUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

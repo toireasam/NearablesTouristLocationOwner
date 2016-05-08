@@ -108,7 +108,7 @@ TouristLocationArtefact *touristLocationArtefact;
                                      }
                                      else
                                      {
-                                         
+                                         // User just wants to upload image
                                      }
                                      
                                  }];
@@ -120,12 +120,14 @@ TouristLocationArtefact *touristLocationArtefact;
         touristLocationImageClass[@"TouristLocation"] = touristLocation.touristLocationName;
         touristLocationImageClass[@"ArtefactImage"] = imageFile;
         [touristLocationImageClass saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if(succeeded){
-                // Object saved
+            if(succeeded)
+            {
+                // Image is saved
             }
             else
             {
-                
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
             }
         }];
     }

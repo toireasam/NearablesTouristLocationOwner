@@ -15,8 +15,7 @@
     // Key to interact with Parse API
     [Parse setApplicationId:@"ZoFHgn6IfSnsuYTSkvZOkecTejs8Wa00dpEWU6go"
                   clientKey:@"RcYERJZfY2fDRpmz48rs7i6DpLWshMtuMliLA5qP"];
-    
-    
+        
     [[UITabBar appearance] setTintColor:[UIColor darkGrayColor]];
     
     [self getLoginStatus];
@@ -62,8 +61,8 @@
 {
     // Present login screen if user has not yet logged in
     NSUserDefaults *standardDefaults = [NSUserDefaults standardUserDefaults];
-    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil) {
-        
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedin"] == nil)
+    {
         [self showLoginScreen:YES];
         
     }
@@ -71,7 +70,6 @@
     {
         [self showLoginScreen:YES];
     }
-    
 }
 
 @end

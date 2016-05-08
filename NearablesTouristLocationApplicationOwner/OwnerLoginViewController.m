@@ -33,6 +33,7 @@ AdminUser *currentUser;
 }
 
 - (void)didTapOnView {
+    
     [self.usernameTxt resignFirstResponder];
     [self.passwordTxt resignFirstResponder];
 }
@@ -60,7 +61,7 @@ AdminUser *currentUser;
                  [self setUserLogin:@"in"];
                  
                  currentUser.adminsTouristLocation = [[PFUser currentUser] objectForKey:@"TouristLocationName"];
-
+                 
                  [self setAdminLocation:currentUser.adminsTouristLocation];
                  
                  [self dismissViewControllerAnimated:YES completion:nil];
